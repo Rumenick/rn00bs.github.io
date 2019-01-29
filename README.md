@@ -1,4 +1,4 @@
-# rn00bs.github.io/
+# rn00bs.github.io
 
 Este repositório refere-se ao projeto de colaboração (@ scp93 e @Rumenick) que dissemina conceitos básicos sobre a linguagem R, hospedado no site [rn00bs.com.br] (http://rn00bs.com.br/).
 
