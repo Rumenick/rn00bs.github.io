@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R para N00bs! on R para N00bs!</title>
+    <link>/</link>
+    <description>Recent content in R para N00bs! on R para N00bs!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Mon, 03 Dec 2018 00:00:00 -0200</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Propriedade Intelectual e Política de Privacidade</title>
+      <link>/privacy/</link>
+      <pubDate>Fri, 21 Dec 2018 00:00:00 -0200</pubDate>
+      
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;Todo conteúdo disponibilizado no website é de livre acesso, de autoria ou co-autoria do nosso time principal de escritores. Sendo assim, todo o material é original e foi produzido com o intuito de colaborar com a comunidade científica. Não é permitido a reprodução do conteúdo e veiculação do mesmo, o uso da obra intelectual deve ser recompensado segundo a Lei nº 9.610 de 1998. Novos colabores e parceiros são bem-vindos.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Renato - Coordenador</title>
+      <link>/team/renato/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 -0200</pubDate>
+      
+      <guid>/team/renato/</guid>
+      <description>&lt;p&gt;Mestrando em Estatística pela Universidade Federal de Minas Gerais. Possui graduação em Estatística pela Universidade Federal Fluminense (2017). Tem experiência na área de Estatística e Probabilidade, com ênfase em Séries Temporais, atuando principalmente nos seguintes temas: modelos autoregressivos, modelos lineares generalizados, programação estatística, inferência clássica e noções de macroeconomia. Bolsista Capes pelo Ciência sem Fronteiras na University of Wisconsin - Platteville (2015). Atuou como bolsista no Laboratório de Documentação Ativa e Design Inteligente da UFF(2017).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rumenick - Coordenador</title>
+      <link>/team/rumenick/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 -0200</pubDate>
+      
+      <guid>/team/rumenick/</guid>
+      <description>&lt;p&gt;Possui graduação em Estatística pela Universidade Federal do Rio Grande do Norte (2013) e mestrado em Matemática Aplicada e Estatística pela Universidade Federal do Rio Grande do Norte (2015). Atualmente é discente do curso de doutorado do Programa de Pós-graduação em Estatística da Universidade Federal de Minas Gerais e membro do grupo de alunos do Programa de Pós-graduação em Estatística Stats4Good. Tem experiência nas áreas de Probabilidade e Estatística com ênfase em Estatística, atuando principalmente, nos seguintes temas: modelos paramétricos e semiparamétricos de sobrevivência, modelos de regressão, métodos computacionais em Estatística e Consultoria Estatística.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Silvio - Tutor</title>
+      <link>/team/silvio/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 -0200</pubDate>
+      
+      <guid>/team/silvio/</guid>
+      <description>&lt;p&gt;Mestrando em Estatística pela UFMG. Possui graduação em Estatística pela UFES. Tem experiência na área de Estatística e Probabilidade, com ênfase em Probabilidade e Estatística, atuando principalmente nos seguintes temas: análise de regressão, inferência estatística, modelos de misturas e séries temporais.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
