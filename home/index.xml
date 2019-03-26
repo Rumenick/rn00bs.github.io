@@ -95,9 +95,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristiq
     </item>
     
     <item>
-      <title>Recent Posts</title>
+      <title>Recente</title>
       <link>/home/posts/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Tue, 26 Mar 2019 00:00:00 -0300</pubDate>
       
       <guid>/home/posts/</guid>
       <description></description>
@@ -133,7 +133,7 @@ I am a teaching instructor for the following courses at University X:
     </item>
     
     <item>
-      <title>Fale conosco</title>
+      <title>Contato</title>
       <link>/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
