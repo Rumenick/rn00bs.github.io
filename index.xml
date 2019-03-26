@@ -13,16 +13,17 @@
     <item>
       <title>História do R</title>
       <link>/post/rhistory/</link>
-      <pubDate>Tue, 26 Mar 2019 11:01:16 +0000</pubDate>
+      <pubDate>Tue, 26 Mar 2019 12:33:44 +0000</pubDate>
       
       <guid>/post/rhistory/</guid>
       <description>
 
 
-&lt;p&gt;Imagine o seguinte cenário: você é um professor que utiliza vários softwares em suas aulas, e tem a missão de ensinar aos seus alunos como usa-los. Porém, há um problema, os softwares que você tem disponíveis são todos de alto custo. Para a maioria dos alunos que você der aula, após saírem da universidade, dificilmente terão acesso a tais softwares ou condições financeiras de comprar as licenças. Como lidar com isso?&lt;/p&gt;
-&lt;p&gt;Bom, essa era a missão de Ross Ihaka e Robert Gentleman. Dois professores, da Universidade de Auckland, na Nova Zelândia, que se depararam com esse cenário que os incomodava bastante. Coincidência ou não, em 1993 Ross teve acesso a um livro chamado “&lt;em&gt;New S language&lt;/em&gt;”, que lhe trouxe uma ideia inusitada. Tomando como base as ideias da linguagem S, os dois professores produziram sua própria linguagem de computador para dar aulas de estatística, e deram à ela o nome de R (que faz menção ao nome de seus criadores e também referencia a linguagem S).&lt;/p&gt;
-&lt;p&gt;No início o R era apenas utilizados por seus alunos, que após as aulas levavam com eles copias do recém criado software. Contudo, essas cópias foram sendo repassadas, aumentando o interesse sobre a linguagem. Até que em julho de 1995, Ross e Robert resolveram aumentar a disponibilidade do R, disponibilizando-o num servidor da universidade. O sucesso do R foi tanto, que após 2 anos a linguagem já tinha visibilidade mundial, o que despertou o interesse de muitos desenvolvedores, inclusive John Chambers, um dos idealizadores e criadores da linguagem S.&lt;/p&gt;
-&lt;p&gt;Nos últimos anos o R se tornou o queridinho de algumas empresas, especialmente entre das gigantes do ramo da tecnologia, como Facebook e Google. Que foram atraídas por algumas vantagens do R sobre outros softwares, como ser rápido, gratuito e excelente para análise estatística. Além disso, a linguagem está entre no top 3 das linguagens utilizadas por cientistas de dados.&lt;/p&gt;
+&lt;p&gt;Imagine o seguinte cenário: você é um professor que utiliza vários softwares em suas aulas e tem a missão de ensinar aos seus alunos como usar cada um deles.&lt;/p&gt;
+&lt;p&gt;No entanto, há um problema! Os softwares disponíveis são de alto custo e, portanto, a maioria dos alunos dificilmente terão acesso após deixarem a universidade. Como lidar com tais softwares dada as dificuldades financeiras de comprar as licenças?&lt;/p&gt;
+&lt;p&gt;Bom, essa era a missão de Ross Ihaka e Robert Gentleman. Dois professores, da Universidade de Auckland, na Nova Zelândia, que se depararam com esse cenário incômodo. Coincidência ou não, em 1993 Ross teve acesso a um livro chamado “&lt;em&gt;New S language&lt;/em&gt;”, que lhe trouxe uma ideia inusitada. Tomando como base as ideias da linguagem S, os dois professores produziram sua própria linguagem de computador para dar aulas de estatística, e deram à ela o nome de R (que faz menção ao nome de seus criadores e também faz referencia à linguagem S).&lt;/p&gt;
+&lt;p&gt;No início, o R era apenas distribuído entre os alunos, que após as aulas levavam com cópias do recém criado software. Contudo, essas cópias foram sendo repassadas, aumentando o interesse sobre a linguagem. Até que, em julho de 1995, Ross e Robert começaram a disseminar o software R e consequentemente, a nova linguagem de programação que surgia, disponibilizando-o num servidor da universidade. O sucesso do R foi tanto, que após 2 anos a linguagem já tinha visibilidade mundial, o que despertou o interesse de muitos desenvolvedores, inclusive John Chambers, um dos idealizadores e criadores da linguagem S.&lt;/p&gt;
+&lt;p&gt;Nos últimos anos o R se tornou o queridinho de muitas empresas, especialmente das gigantes do ramo da tecnologia, como Facebook e Google, atraídas pelas vantagens do R sobre outros softwares, como custo, rápidez e código aberto, além das excelentes funcionalidades para análises estatísticas. Curiosamente hoje, a linguagem está no top 3 das linguagens utilizadas por cientistas de dados.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Referências:&lt;/p&gt;
 &lt;/blockquote&gt;
