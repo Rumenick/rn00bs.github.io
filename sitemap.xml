@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>/post/rhistory/</loc>
+      <lastmod>2019-03-26T11:01:16+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/team/</loc>
       <lastmod>2019-01-29T00:00:00-02:00</lastmod>
     </url>
@@ -44,6 +52,14 @@
     
     <url>
     
+      <loc>/post/</loc>
+      <lastmod>2017-01-01T00:00:00-02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/categories/</loc>
       <priority>0</priority>
     </url>
@@ -53,6 +69,15 @@
     <url>
     
       <loc>/publication_types/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/r/</loc>
+      <lastmod>2019-03-26T11:01:16+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -70,6 +95,16 @@
     <url>
     
       <loc>/tags/</loc>
+      <lastmod>2019-03-26T11:01:16+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/hist%C3%B3ria/</loc>
+      <lastmod>2019-03-26T11:01:16+00:00</lastmod>
       <priority>0</priority>
     </url>
     

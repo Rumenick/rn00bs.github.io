@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>história on R para N00bs!</title>
+    <link>/tags/hist%C3%B3ria/</link>
+    <description>Recent content in história on R para N00bs!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Tue, 26 Mar 2019 11:01:16 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/hist%C3%B3ria/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>História do R</title>
+      <link>/post/rhistory/</link>
+      <pubDate>Tue, 26 Mar 2019 11:01:16 +0000</pubDate>
+      
+      <guid>/post/rhistory/</guid>
+      <description>Imagine o seguinte cenário: você é um professor que utiliza vários softwares em suas aulas, e tem a missão de ensinar aos seus alunos como usa-los. Porém, há um problema, os softwares que você tem disponíveis são todos de alto custo. Para a maioria dos alunos que você der aula, após saírem da universidade, dificilmente terão acesso a tais softwares ou condições financeiras de comprar as licenças. Como lidar com isso?</description>
+    </item>
+    
+  </channel>
+</rss>
