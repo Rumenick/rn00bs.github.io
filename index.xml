@@ -13,7 +13,7 @@
     <item>
       <title>História do R</title>
       <link>/post/rhistory/</link>
-      <pubDate>Tue, 26 Mar 2019 15:20:30 +0000</pubDate>
+      <pubDate>Wed, 27 Mar 2019 14:59:58 +0000</pubDate>
       
       <guid>/post/rhistory/</guid>
       <description>
@@ -31,10 +31,55 @@
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Fox, John. 2009 Aspects of the Social Organization and Trajectory of the R Project. R Journal.&lt;/li&gt;
 &lt;li&gt;Ihaka, Ross e Gentleman, Robert. 1996 R: A language for data analysis and graphics. Journal of Computational and Graphical Statistics.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cienciaedados.com/uma-breve-introducao-ao-r/&#34; class=&#34;uri&#34;&gt;http://www.cienciaedados.com/uma-breve-introducao-ao-r/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cienciaedados.com/r-ou-python-para-analise-de-dados/&#34; class=&#34;uri&#34;&gt;http://www.cienciaedados.com/r-ou-python-para-analise-de-dados/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://dzone.com/articles/what-is-data-science-programming-top-7-languages&#34; class=&#34;uri&#34;&gt;https://dzone.com/articles/what-is-data-science-programming-top-7-languages&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Estatística Aplicada e Probabilidade Para Engenheiros</title>
+      <link>/tutorial/aular/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tutorial/aular/</guid>
+      <description>
+
+&lt;p&gt;Prof. Silvio Cabral&lt;/p&gt;
+
+&lt;h2 id=&#34;aula-1&#34;&gt;Aula 1&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;Aula1/aula1.pdf&#34; target=&#34;_blank&#34;&gt;aula1.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Aula1/dados.xlsx&#34; target=&#34;_blank&#34;&gt;dados.xlsx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Aula1/dados_titanic.csv&#34; target=&#34;_blank&#34;&gt;dados_titanic.csv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Aula1/script.R&#34; target=&#34;_blank&#34;&gt;script.R&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;aula-2&#34;&gt;Aula 2&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;Aula2/aula2.pdf&#34; target=&#34;_blank&#34;&gt;aula2.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Aula2/beerSP.csv&#34; target=&#34;_blank&#34;&gt;beerSP.csv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Aula2/BlackFriday.csv&#34; target=&#34;_blank&#34;&gt;BlackFriday.csv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Aula2/dados_titanic.csv&#34; target=&#34;_blank&#34;&gt;dados_titanic.csv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Aula2/script.R&#34; target=&#34;_blank&#34;&gt;script.R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;Aula2/tansito.csv&#34; target=&#34;_blank&#34;&gt;tansito.csv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Planejamento de Experimentos</title>
+      <link>/tutorial/doe/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tutorial/doe/</guid>
+      <description>
+
+&lt;p&gt;Prof. Rumenick Pereira&lt;/p&gt;
+
+&lt;h2 id=&#34;em-breve&#34;&gt;Em breve&lt;/h2&gt;
 </description>
     </item>
     
