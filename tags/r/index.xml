@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Wed, 27 Mar 2019 14:59:58 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2019 09:38:55 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,12 +15,11 @@
     <item>
       <title>História do R</title>
       <link>/post/rhistory/</link>
-      <pubDate>Wed, 27 Mar 2019 14:59:58 +0000</pubDate>
+      <pubDate>Sun, 31 Mar 2019 09:38:55 +0000</pubDate>
       
       <guid>/post/rhistory/</guid>
-      <description>Imagine o seguinte cenário: você é um professor que utiliza vários softwares em suas aulas e tem a missão de ensinar aos seus alunos como usar cada um deles.
-No entanto, há um problema! Os softwares disponíveis são de alto custo e, portanto, a maioria dos alunos dificilmente terão acesso após deixarem a universidade. Como lidar com tais softwares dada as dificuldades financeiras de comprar as licenças?
-Bom, essa era a missão de Ross Ihaka e Robert Gentleman.</description>
+      <description>Imagine o seguinte cenário: você é um professor que utiliza vários softwares em suas aulas e, como professor, sua missão é a de ensinar a cada um de seus alunos como usar todos eles. Além disso, ainda há outro problema! Os softwares disponíveis no mercado são de alto custo e, portanto, a maioria dos alunos dificilmente terá acesso à essas ferramentas após concluírem o curso.
+A questão é: Como lidar com tais softwares dada as dificuldades financeiras dos estudantes ao deixarem a universidade?</description>
     </item>
     
   </channel>

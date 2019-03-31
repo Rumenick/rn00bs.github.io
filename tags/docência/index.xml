@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docência on R para N00bs!</title>
+    <link>/tags/doc%C3%AAncia/</link>
+    <description>Recent content in docência on R para N00bs!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Wed, 27 Mar 2019 00:00:00 -0300</lastBuildDate>
+    
+	<atom:link href="/tags/doc%C3%AAncia/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Estatística Aplicada e Probabilidade Para Engenheiros</title>
+      <link>/tutorial/aular/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tutorial/aular/</guid>
+      <description> Prof. Silvio Cabral
+Aula 1  aula1.pdf dados.xlsx dados_titanic.csv script.R  Aula 2  aula2.pdf beerSP.csv BlackFriday.csv dados_titanic.csv script.R tansito.csv  </description>
+    </item>
+    
+  </channel>
+</rss>

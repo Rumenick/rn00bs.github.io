@@ -7,26 +7,179 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Wed, 27 Mar 2019 14:59:58 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2019 00:00:00 -0300</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Engenharia</title>
+      <link>/tags/engenharia/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/engenharia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Epidemiologia</title>
+      <link>/tags/epidemiologia/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/epidemiologia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estatística aplicada</title>
+      <link>/tags/estat%C3%ADstica-aplicada/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/estat%C3%ADstica-aplicada/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Planejamento de Experimentos</title>
+      <link>/tags/planejamento-de-experimentos/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/planejamento-de-experimentos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Probabilidade</title>
+      <link>/tags/probabilidade/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/probabilidade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Wed, 27 Mar 2019 14:59:58 +0000</pubDate>
+      <pubDate>Sun, 31 Mar 2019 09:38:55 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Rumenick</title>
+      <link>/tags/rumenick/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/rumenick/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S</title>
+      <link>/tags/s/</link>
+      <pubDate>Sun, 31 Mar 2019 09:38:55 +0000</pubDate>
+      
+      <guid>/tags/s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Silvio</title>
+      <link>/tags/silvio/</link>
+      <pubDate>Sun, 31 Mar 2019 09:38:55 +0000</pubDate>
+      
+      <guid>/tags/silvio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UFF</title>
+      <link>/tags/uff/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/uff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UFMG</title>
+      <link>/tags/ufmg/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/ufmg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>USP</title>
+      <link>/tags/usp/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/usp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aula</title>
+      <link>/tags/aula/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/aula/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>curso</title>
+      <link>/tags/curso/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/curso/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docência</title>
+      <link>/tags/doc%C3%AAncia/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/doc%C3%AAncia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>estatística</title>
+      <link>/tags/estat%C3%ADstica/</link>
+      <pubDate>Sun, 31 Mar 2019 09:38:55 +0000</pubDate>
+      
+      <guid>/tags/estat%C3%ADstica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>história</title>
       <link>/tags/hist%C3%B3ria/</link>
-      <pubDate>Wed, 27 Mar 2019 14:59:58 +0000</pubDate>
+      <pubDate>Sun, 31 Mar 2019 09:38:55 +0000</pubDate>
       
       <guid>/tags/hist%C3%B3ria/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notas de aula</title>
+      <link>/tags/notas-de-aula/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/notas-de-aula/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>/tags/tutorial/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/tutorial/</guid>
       <description></description>
     </item>
     
