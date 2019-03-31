@@ -4,16 +4,16 @@
     
     <url>
     
-      <loc>/tutorial/</loc>
-      <lastmod>2019-03-27T14:00:00-03:00</lastmod>
+      <loc>/post/rhistory/</loc>
+      <lastmod>2019-03-31T09:38:55+00:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>/post/rhistory/</loc>
-      <lastmod>2019-03-27T14:59:58+00:00</lastmod>
+      <loc>/tutorial/</loc>
+      <lastmod>2019-03-27T14:00:00-03:00</lastmod>
     </url>
     
   
@@ -92,6 +92,51 @@
     
     <url>
     
+      <loc>/tags/engenharia/</loc>
+      <lastmod>2019-03-27T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/epidemiologia/</loc>
+      <lastmod>2019-03-23T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/estat%C3%ADstica-aplicada/</loc>
+      <lastmod>2019-03-27T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/planejamento-de-experimentos/</loc>
+      <lastmod>2019-03-23T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/probabilidade/</loc>
+      <lastmod>2019-03-27T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/publication_types/</loc>
       <priority>0</priority>
     </url>
@@ -101,7 +146,7 @@
     <url>
     
       <loc>/tags/r/</loc>
-      <lastmod>2019-03-27T14:59:58+00:00</lastmod>
+      <lastmod>2019-03-31T09:38:55+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -118,8 +163,98 @@
     
     <url>
     
+      <loc>/tags/rumenick/</loc>
+      <lastmod>2019-03-23T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/s/</loc>
+      <lastmod>2019-03-31T09:38:55+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/silvio/</loc>
+      <lastmod>2019-03-31T09:38:55+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/tags/</loc>
-      <lastmod>2019-03-27T14:59:58+00:00</lastmod>
+      <lastmod>2019-03-27T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/uff/</loc>
+      <lastmod>2019-03-23T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/ufmg/</loc>
+      <lastmod>2019-03-27T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/usp/</loc>
+      <lastmod>2019-03-23T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/aula/</loc>
+      <lastmod>2019-03-27T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/curso/</loc>
+      <lastmod>2019-03-27T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/doc%C3%AAncia/</loc>
+      <lastmod>2019-03-27T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/estat%C3%ADstica/</loc>
+      <lastmod>2019-03-31T09:38:55+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -128,7 +263,25 @@
     <url>
     
       <loc>/tags/hist%C3%B3ria/</loc>
-      <lastmod>2019-03-27T14:59:58+00:00</lastmod>
+      <lastmod>2019-03-31T09:38:55+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/notas-de-aula/</loc>
+      <lastmod>2019-03-27T00:00:00-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/tutorial/</loc>
+      <lastmod>2019-03-27T00:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
     
