@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>renato on Rn00bs</title>
+    <link>/authors/renato/</link>
+    <description>Recent content in renato on Rn00bs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>&amp;copy; 2019</copyright>
+    
+	<atom:link href="/authors/renato/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/author/renato/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/author/renato/</guid>
+      <description>Mr. Panaro é fluminense, fez graduação na UFF e foi bolsista Capes durante o período sanduíche nos EUA. Em Platteville, aprendeu princípios de contabilidade, finanças, macroeconomia e programação orientada a objeto. De volta a Niterói, atuou como bolsita da Fundação Euclides da Cunha (FEC), consultando bases SQL integradas ao R (RSQL). Além disso, foi estagiário no Instituto GPP de pesquisa, onde aprendeu SAS no contexto de amostragem. Atualmente, Renato mora em BH, faz parte programa de pós-graduação do DEST-UFMG, é bolsista de pesquisa da Fundação Cristiano Ottoni (FCO) e explora aplicações usando a integração do R com stan (RStan).</description>
+    </item>
+    
+  </channel>
+</rss>
