@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Rn00bs</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Rn00bs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Tue, 26 Mar 2019 00:00:00 -0300</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>História do R</title>
+      <link>/post/rhistory/</link>
+      <pubDate>Tue, 26 Mar 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/post/rhistory/</guid>
+      <description>Imagine o seguinte cenário: você é um professor que utiliza vários softwares em suas aulas e, como professor, sua missão é a de ensinar a cada um de seus alunos como usar todos eles. Além disso, ainda há outro problema! Os softwares disponíveis no mercado são de alto custo e, portanto, a maioria dos alunos dificilmente terá acesso à essas ferramentas após concluírem o curso.
+A questão é: Como lidar com tais softwares dada as dificuldades financeiras dos estudantes ao deixarem a universidade?</description>
+    </item>
+    
+  </channel>
+</rss>
