@@ -1,0 +1,117 @@
+---
+title:  'Como implementar a técnica Jackknife no R?'
+subtitle: |
+  Um exemplo de métodos de reamostragem.
+authors:
+- Renato
+date: "`r format(Sys.time())`"
+categories: ["Estatística Computacional"]
+tags: [jackknife, R, Renato, estatística, intro, computacional]
+output: md_document
+bibliography: references.bib
+image:
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/tM16SjCYy84)'
+url_code: "jackknife.R"
+---
+
+## Jackknife
+
+Em estatística, o nome jacknife foi usado por @Tukey:1958 para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. A técnica desenvolvida por Maurice @Quenouille:1949 é particularmente útil em situações em que a distribuição do estimador é desconhecida e não é possível obter outras amostras da população alvo. 
+
+A alcunha *jackknife* ("canivete") remete à portabilidade e a possibilidade de uso em diversas situações. A ideia básica do Jackknife consiste em recalcular um particular estimador, eliminando sistematicamente cada observação individual. Similar à validação cruzada *leave-one-out*, deixa-se sempre de fora uma (ou algumas) observações da amostra.
+
+### Estimativa Parcial
+
+A estimativa parcial $\hat\theta_{-j}$ consiste em simplesmente recalcular o estimador para cada amostra Jack!
+
+$$\hat\theta_{-j}= \hat\theta(X_1, X_2, \dots, X_{j-1}, X_{j+1}, \dots, X_n)$$
+
+### Pseudo-valores
+
+Os pseudo-valores $\hat\theta_j^*$ farão parte do cáculo da estimativa pontual abaixo. 
+
+$$\hat\theta_j^*=n\hat\theta-(n-1)\hat\theta_{-j}$$
+
+
+
+
+### Estimativa Pontual Jackknife
+
+A estimativa pontual Jack é a média dos pseudo-valores.
+$$\hat\theta^* = \frac{\sum\limits_{i= 1}^n \hat\theta_j^*}{n}$$
+
+### Exemplo 2.1 do @Manly:2006 :
+
+Suponha que seja extraída uma amostra aleatória de tamanho 20 de uma certa população na qual o desvio-padrão $\sigma$ é o parâmeto de interesse. Utiliza-se o estimador
+$\hat{\sigma} = \sum\limits_{i=1}^n(X_i-\bar{X})^2/n$ para $\sigma$.  
+
+No R, o sinal de atribuição `<-`  atribui nome ao objeto que está à direita do sinal, nesse exemplo, "amostra" é a amostra original e n" é o tamanho da amostra. O operador `c()` concatena objetos de modo que a concatenação de numéricos forme um vetor de numéricos. 
+
+```{r}
+amostra <- c(3.56, 0.69, 0.10, 1.84, 3.93, 1.25, 0.18, 1.13, 0.27, 0.50, 0.67,
+0.01, 0.61, 0.82, 1.70, 0.39, 0.11, 1.20, 1.21, 0.72); amostra
+n  <-  length(amostra); n
+```
+
+```{r}
+theta_chapeu <- function(x){ 
+  xbarra <- mean(x)
+  desvio <- x-mean(x)
+  n <- length(x)
+  return(sqrt(sum(desvio^2)/n)) 
+} 
+
+sigma_amostra <- theta_chapeu(amostra); sigma_amostra
+```
+
+As amostras Jackknife podem ser visualizadas em forma matricial, onde cada linha da `matrizjack` corresponde a uma amostra. Note que, ao retirar um valor por vez são obtidas n amostras jack de tamanho n-1. Portanto, no Rscript abaixo, os valores de cada amostra bootstrap foram salvos em cada linha de um objeto do tipo `matrix` de dimensão $n \times n-1$ (linha x coluna), usando o `for`.
+
+```{r}
+matrizjack <- matrix(NA, n, (n-1))
+for ( i in 1:n){
+  amostrajack <-amostra[-i]
+  matrizjack[i, ] <- amostra[-i]
+}
+
+head(matrizjack)
+```
+
+Para o cálculo das estimativas parciais $(\hat\theta_{-1}, \hat\theta_{-2}, \dots, \hat\theta_{-n})$, a função `apply` é usada abaixo para aplicar a função estimador em todas as linhas ("1") da `matrizjack`, o uso de funções `apply` evita o uso do `for` e torna a programação computacionalmente mais eficiente (em breve teremos um post sobre códigos mais eficintes).
+
+```{r}
+sigma_par <- apply(matrizjack, 1 , theta_chapeu) 
+print(sigma_par)
+```
+
+Os pseudo-valores $(\hat\theta_{1}^*, \hat\theta_{2}^*, \dots, \hat\theta_{n}^*)$ são calculados de acordo com a fórmula definida acima.
+
+```{r}
+pseudov <- n * sigma_amostra-(n-1) * sigma_par 
+print(pseudov)
+```
+
+A estimava pontual jackknife $\hat\theta^*$ é dada pela média aritmética dos pseudo-valores.
+
+```{r}
+estjack <- mean(pseudov)
+print(estjack)
+```
+
+### Estimativa Intervalar
+
+Segundo @Manly:2006, a estimativa intervalar aproximada para $\theta$ a um nível de $100(1-\alpha)$ de confiança é dada por um intervalo de confiança $t$-Student:
+
+$$\left[\hat\theta^* \pm t_{\frac{\alpha}{2}, (n-1)}\frac{s}{\sqrt{n}}\right]$$
+
+Ao fixar $\alpha = 0,05$, temos o intervalo Jackknife de 95% de confiança:
+
+```{r}
+ alfa <- 1-0.95  
+ s <- sd(pseudov)
+
+ L <- estjack - qt(1-alfa/2,df = n-1) * s/sqrt(n) 
+ U <- estjack + qt(1-alfa/2,df = n-1) * s/sqrt(n) 
+ c("L"=L,"U"=U) 
+```
+
+## Referências

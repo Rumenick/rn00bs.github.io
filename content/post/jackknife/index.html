@@ -1,0 +1,125 @@
+---
+title:  'Como implementar a técnica Jackknife no R?'
+subtitle: |
+  Um exemplo de métodos de reamostragem.
+authors:
+- Renato
+date: "2019-05-12 11:00:38"
+categories: ["Estatística Computacional"]
+tags: [jackknife, R, Renato, estatística, intro, computacional]
+output: md_document
+bibliography: references.bib
+image:
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/tM16SjCYy84)'
+url_code: "jackknife.R"
+---
+
+
+
+<div id="jackknife" class="section level2">
+<h2>Jackknife</h2>
+<p>Em estatística, o nome jacknife foi usado por <span class="citation">Tukey (1958)</span> para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. A técnica desenvolvida por Maurice <span class="citation">Quenouille (1949)</span> é particularmente útil em situações em que a distribuição do estimador é desconhecida e não é possível obter outras amostras da população alvo.</p>
+<p>A alcunha <em>jackknife</em> (“canivete”) remete à portabilidade e a possibilidade de uso em diversas situações. A ideia básica do Jackknife consiste em recalcular um particular estimador, eliminando sistematicamente cada observação individual. Similar à validação cruzada <em>leave-one-out</em>, deixa-se sempre de fora uma (ou algumas) observações da amostra.</p>
+<div id="estimativa-parcial" class="section level3">
+<h3>Estimativa Parcial</h3>
+<p>A estimativa parcial <span class="math inline">\(\hat\theta_{-j}\)</span> consiste em simplesmente recalcular o estimador para cada amostra Jack!</p>
+<p><span class="math display">\[\hat\theta_{-j}= \hat\theta(X_1, X_2, \dots, X_{j-1}, X_{j+1}, \dots, X_n)\]</span></p>
+</div>
+<div id="pseudo-valores" class="section level3">
+<h3>Pseudo-valores</h3>
+<p>Os pseudo-valores <span class="math inline">\(\hat\theta_j^*\)</span> farão parte do cáculo da estimativa pontual abaixo.</p>
+<p><span class="math display">\[\hat\theta_j^*=n\hat\theta-(n-1)\hat\theta_{-j}\]</span></p>
+</div>
+<div id="estimativa-pontual-jackknife" class="section level3">
+<h3>Estimativa Pontual Jackknife</h3>
+<p>A estimativa pontual Jack é a média dos pseudo-valores.
+<span class="math display">\[\hat\theta^* = \frac{\sum\limits_{i= 1}^n \hat\theta_j^*}{n}\]</span></p>
+</div>
+<div id="exemplo-2.1-do-manly2006" class="section level3">
+<h3>Exemplo 2.1 do <span class="citation">Manly (2006)</span> :</h3>
+<p>Suponha que seja extraída uma amostra aleatória de tamanho 20 de uma certa população na qual o desvio-padrão <span class="math inline">\(\sigma\)</span> é o parâmeto de interesse. Utiliza-se o estimador
+<span class="math inline">\(\hat{\sigma} = \sum\limits_{i=1}^n(X_i-\bar{X})^2/n\)</span> para <span class="math inline">\(\sigma\)</span>.</p>
+<p>No R, o sinal de atribuição <code>&lt;-</code> atribui nome ao objeto que está à direita do sinal, nesse exemplo, “amostra” é a amostra original e n" é o tamanho da amostra. O operador <code>c()</code> concatena objetos de modo que a concatenação de numéricos forme um vetor de numéricos.</p>
+<pre class="r"><code>amostra &lt;- c(3.56, 0.69, 0.10, 1.84, 3.93, 1.25, 0.18, 1.13, 0.27, 0.50, 0.67,
+0.01, 0.61, 0.82, 1.70, 0.39, 0.11, 1.20, 1.21, 0.72); amostra</code></pre>
+<pre><code>##  [1] 3.56 0.69 0.10 1.84 3.93 1.25 0.18 1.13 0.27 0.50 0.67 0.01 0.61 0.82
+## [15] 1.70 0.39 0.11 1.20 1.21 0.72</code></pre>
+<pre class="r"><code>n  &lt;-  length(amostra); n</code></pre>
+<pre><code>## [1] 20</code></pre>
+<pre class="r"><code>theta_chapeu &lt;- function(x){ 
+  xbarra &lt;- mean(x)
+  desvio &lt;- x-mean(x)
+  n &lt;- length(x)
+  return(sqrt(sum(desvio^2)/n)) 
+} 
+
+sigma_amostra &lt;- theta_chapeu(amostra); sigma_amostra</code></pre>
+<pre><code>## [1] 1.032848</code></pre>
+<p>As amostras Jackknife podem ser visualizadas em forma matricial, onde cada linha da <code>matrizjack</code> corresponde a uma amostra. Note que, ao retirar um valor por vez são obtidas n amostras jack de tamanho n-1. Portanto, no Rscript abaixo, os valores de cada amostra bootstrap foram salvos em cada linha de um objeto do tipo <code>matrix</code> de dimensão <span class="math inline">\(n \times n-1\)</span> (linha x coluna), usando o <code>for</code>.</p>
+<pre class="r"><code>matrizjack &lt;- matrix(NA, n, (n-1))
+for ( i in 1:n){
+  amostrajack &lt;-amostra[-i]
+  matrizjack[i, ] &lt;- amostra[-i]
+}
+
+head(matrizjack)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13]
+## [1,] 0.69 0.10 1.84 3.93 1.25 0.18 1.13 0.27  0.5  0.67  0.01  0.61  0.82
+## [2,] 3.56 0.10 1.84 3.93 1.25 0.18 1.13 0.27  0.5  0.67  0.01  0.61  0.82
+## [3,] 3.56 0.69 1.84 3.93 1.25 0.18 1.13 0.27  0.5  0.67  0.01  0.61  0.82
+## [4,] 3.56 0.69 0.10 3.93 1.25 0.18 1.13 0.27  0.5  0.67  0.01  0.61  0.82
+## [5,] 3.56 0.69 0.10 1.84 1.25 0.18 1.13 0.27  0.5  0.67  0.01  0.61  0.82
+## [6,] 3.56 0.69 0.10 1.84 3.93 0.18 1.13 0.27  0.5  0.67  0.01  0.61  0.82
+##      [,14] [,15] [,16] [,17] [,18] [,19]
+## [1,]   1.7  0.39  0.11   1.2  1.21  0.72
+## [2,]   1.7  0.39  0.11   1.2  1.21  0.72
+## [3,]   1.7  0.39  0.11   1.2  1.21  0.72
+## [4,]   1.7  0.39  0.11   1.2  1.21  0.72
+## [5,]   1.7  0.39  0.11   1.2  1.21  0.72
+## [6,]   1.7  0.39  0.11   1.2  1.21  0.72</code></pre>
+<p>Para o cálculo das estimativas parciais <span class="math inline">\((\hat\theta_{-1}, \hat\theta_{-2}, \dots, \hat\theta_{-n})\)</span>, a função <code>apply</code> é usada abaixo para aplicar a função estimador em todas as linhas (“1”) da <code>matrizjack</code>, o uso de funções <code>apply</code> evita o uso do <code>for</code> e torna a programação computacionalmente mais eficiente (em breve teremos um post sobre códigos mais eficintes).</p>
+<pre class="r"><code>sigma_par &lt;- apply(matrizjack, 1 , theta_chapeu) 
+print(sigma_par)</code></pre>
+<pre><code>##  [1] 0.8788364 1.0563893 1.0360975 1.0430060 0.8134128 1.0585751 1.0399595
+##  [8] 1.0594885 1.0438813 1.0519008 1.0560070 1.0313246 1.0547329 1.0583612
+## [15] 1.0483872 1.0484218 1.0365998 1.0590473 1.0589633 1.0569234</code></pre>
+<p>Os pseudo-valores <span class="math inline">\((\hat\theta_{1}^*, \hat\theta_{2}^*, \dots, \hat\theta_{n}^*)\)</span> são calculados de acordo com a fórmula definida acima.</p>
+<pre class="r"><code>pseudov &lt;- n * sigma_amostra-(n-1) * sigma_par 
+print(pseudov)</code></pre>
+<pre><code>##  [1] 3.9590656 0.5855601 0.9711049 0.8398438 5.2021138 0.5440315 0.8977269
+##  [8] 0.5266770 0.8232137 0.6708425 0.5928255 1.0617899 0.6170325 0.5480939
+## [15] 0.7376002 0.7369426 0.9615623 0.5350591 0.5366545 0.5754139</code></pre>
+<p>A estimava pontual jackknife <span class="math inline">\(\hat\theta^*\)</span> é dada pela média aritmética dos pseudo-valores.</p>
+<pre class="r"><code>estjack &lt;- mean(pseudov)
+print(estjack)</code></pre>
+<pre><code>## [1] 1.096158</code></pre>
+</div>
+<div id="estimativa-intervalar" class="section level3">
+<h3>Estimativa Intervalar</h3>
+<p>Segundo <span class="citation">Manly (2006)</span>, a estimativa intervalar aproximada para <span class="math inline">\(\theta\)</span> a um nível de <span class="math inline">\(100(1-\alpha)\)</span> de confiança é dada por um intervalo de confiança <span class="math inline">\(t\)</span>-Student:</p>
+<p><span class="math display">\[\left[\hat\theta^* \pm t_{\frac{\alpha}{2}, (n-1)}\frac{s}{\sqrt{n}}\right]\]</span></p>
+<p>Ao fixar <span class="math inline">\(\alpha = 0,05\)</span>, temos o intervalo Jackknife de 95% de confiança:</p>
+<pre class="r"><code> alfa &lt;- 1-0.95  
+ s &lt;- sd(pseudov)
+
+ L &lt;- estjack - qt(1-alfa/2,df = n-1) * s/sqrt(n) 
+ U &lt;- estjack + qt(1-alfa/2,df = n-1) * s/sqrt(n) 
+ c(&quot;L&quot;=L,&quot;U&quot;=U) </code></pre>
+<pre><code>##        L        U 
+## 0.525173 1.667142</code></pre>
+</div>
+</div>
+<div id="referencias" class="section level2 unnumbered">
+<h2>Referências</h2>
+<div id="refs" class="references">
+<div id="ref-Manly:2006">
+<p>Manly, Bryan FJ. 2006. <em>Randomization, Bootstrap and Monte Carlo Methods in Biology</em>. Chapman; Hall/CRC.</p>
+</div>
+<div id="ref-Quenouille:1949">
+<p>Quenouille, Maurice H. 1949. “Problems in Plane Sampling.” <em>The Annals of Mathematical Statistics</em> 20 (3): 355–75.</p>
+</div>
+<div id="ref-Tukey:1958">
+<p>Tukey, John. 1958. “Bias and Confidence in Not Quite Large Samples.” <em>Ann. Math. Statist.</em> 29: 614.</p>
+</div>
+</div>
+</div>
