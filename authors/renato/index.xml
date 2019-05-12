@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rn00bs</title>
+    <link>/authors/renato/</link>
+    <description>Recent content on Rn00bs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Sun, 12 May 2019 11:00:38 +0000</lastBuildDate>
+    
+	<atom:link href="/authors/renato/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como implementar a técnica Jackknife no R?</title>
+      <link>/post/jackknife/</link>
+      <pubDate>Sun, 12 May 2019 11:00:38 +0000</pubDate>
+      
+      <guid>/post/jackknife/</guid>
+      <description>Jackknife Em estatística, o nome jacknife foi usado por Tukey (1958) para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. A técnica desenvolvida por Maurice Quenouille (1949) é particularmente útil em situações em que a distribuição do estimador é desconhecida e não é possível obter outras amostras da população alvo.
+A alcunha jackknife (“canivete”) remete à portabilidade e a possibilidade de uso em diversas situações.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/renato/</link>
+      <pubDate>Sun, 12 May 2019 11:00:38 +0000</pubDate>
+      
+      <guid>/authors/renato/</guid>
+      <description>Mr. Panaro é fluminense, fez graduação na UFF e foi bolsista Capes durante o período sanduíche nos EUA. Em Platteville, aprendeu princípios de contabilidade, finanças, macroeconomia e programação orientada a objeto. De volta a Niterói, atuou como bolsita da Fundação Euclides da Cunha (FEC), consultando bases SQL integradas ao R (RSQL). Além disso, foi estagiário no Instituto GPP de pesquisa, onde aprendeu SAS no contexto de amostragem. Atualmente, Renato mora em BH, faz parte programa de pós-graduação do DEST-UFMG, é bolsista de pesquisa da Fundação Cristiano Ottoni (FCO) e explora aplicações usando a integração do R com stan (RStan).</description>
+    </item>
+    
+  </channel>
+</rss>

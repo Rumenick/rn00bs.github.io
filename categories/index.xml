@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Rn00bs</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Rn00bs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Sun, 12 May 2019 11:00:38 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Estatística Computacional</title>
+      <link>/categories/estat%C3%ADstica-computacional/</link>
+      <pubDate>Sun, 12 May 2019 11:00:38 +0000</pubDate>
+      
+      <guid>/categories/estat%C3%ADstica-computacional/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Curiosidades</title>
+      <link>/categories/curiosidades/</link>
+      <pubDate>Fri, 26 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/curiosidades/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
