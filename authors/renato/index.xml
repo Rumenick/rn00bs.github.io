@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rn00bs</title>
+    <link>/authors/renato/</link>
+    <description>Recent content on Rn00bs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Mon, 13 May 2019 21:45:35 +0000</lastBuildDate>
+    
+	<atom:link href="/authors/renato/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como fazer o Jackknife no R?</title>
+      <link>/post/jackknife/</link>
+      <pubDate>Mon, 13 May 2019 21:45:35 +0000</pubDate>
+      
+      <guid>/post/jackknife/</guid>
+      <description>Antes que o leitor prossiga é necessário compreender conceitos básicos de inferência como população, amostra, parâmetro, estatística, estimador e estimativa. Se algum desses conceitos não está claro, é recomendável uma breve consulta ao livro de Estatística Básica Morettin and BUSSAB (2017) em poucos minutos, visitando as apenas as definições do capítulo 10 como essa:
+ População é o conjunto de todos os elementos ou resultados sob investigação, Amostra é qualquer subconjunto da população.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/renato/</link>
+      <pubDate>Mon, 13 May 2019 21:45:35 +0000</pubDate>
+      
+      <guid>/authors/renato/</guid>
+      <description>Mr. Panaro é fluminense, fez graduação na UFF e foi bolsista Capes durante o período sanduíche nos EUA. Em Platteville, aprendeu princípios de contabilidade, finanças, macroeconomia e programação orientada a objeto. De volta a Niterói, atuou como bolsita da Fundação Euclides da Cunha (FEC), consultando bases SQL integradas ao R (RSQL). Além disso, foi estagiário no Instituto GPP de pesquisa, onde aprendeu SAS no contexto de amostragem. Atualmente, Renato mora em BH, faz parte programa de pós-graduação do DEST-UFMG, é bolsista de pesquisa da Fundação Cristiano Ottoni (FCO) e explora aplicações usando a integração do R com stan (RStan).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Renato on Rn00bs</title>
+    <link>/tags/renato/</link>
+    <description>Recent content in Renato on Rn00bs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Mon, 13 May 2019 21:43:50 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/renato/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como fazer o Jackknife no R?</title>
+      <link>/post/jackknife/</link>
+      <pubDate>Mon, 13 May 2019 21:43:50 +0000</pubDate>
+      
+      <guid>/post/jackknife/</guid>
+      <description>Antes que o leitor prossiga é necessário compreender conceitos básicos de inferência como população, amostra, parâmetro, estatística, estimador e estimativa. Se algum desses conceitos não está claro, é recomendável uma breve consulta ao livro de Estatística Básica Morettin and BUSSAB (2017) em poucos minutos, visitando as apenas as definições do capítulo 10 como essa:
+ População é o conjunto de todos os elementos ou resultados sob investigação, Amostra é qualquer subconjunto da população.</description>
+    </item>
+    
+  </channel>
+</rss>

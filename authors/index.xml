@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Rn00bs</title>
+    <link>/authors/</link>
+    <description>Recent content in Authors on Rn00bs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Mon, 13 May 2019 21:45:35 +0000</lastBuildDate>
+    
+	<atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/authors/renato/</link>
+      <pubDate>Mon, 13 May 2019 21:45:35 +0000</pubDate>
+      
+      <guid>/authors/renato/</guid>
+      <description>Mr. Panaro é fluminense, fez graduação na UFF e foi bolsista Capes durante o período sanduíche nos EUA. Em Platteville, aprendeu princípios de contabilidade, finanças, macroeconomia e programação orientada a objeto. De volta a Niterói, atuou como bolsita da Fundação Euclides da Cunha (FEC), consultando bases SQL integradas ao R (RSQL). Além disso, foi estagiário no Instituto GPP de pesquisa, onde aprendeu SAS no contexto de amostragem. Atualmente, Renato mora em BH, faz parte programa de pós-graduação do DEST-UFMG, é bolsista de pesquisa da Fundação Cristiano Ottoni (FCO) e explora aplicações usando a integração do R com stan (RStan).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/silvio/</link>
+      <pubDate>Fri, 26 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/silvio/</guid>
+      <description>Silvio Cabral é mestrando em Estatística na UFMG e faz residência em Ciência de Dados na Tenbu. Formado em 2017 pela UFES, tem experiência nas áreas de probabilidade e estatística, análise de regressão, aprendizado de máquina, redes neurais e aprendizado profundo. Atualmente seus principais projetos envolvem problemas de classificação e segmentação de imagens e músicas, utilizando técnicas de aprendizagem de máquina.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/rumenick/</link>
+      <pubDate>Wed, 27 Mar 2019 14:00:00 -0300</pubDate>
+      
+      <guid>/authors/rumenick/</guid>
+      <description>Rumenick Pereira da Silva é professor substituto de Bioestatística da Universidade Federal Fluminense e discente do curso de doutorado do Programa de Pós-graduação em Estatística da Universidade Federal de Minas Gerais. Tem experiência nas áreas de Probabilidade e Estatística com ênfase em Estatística, atuando principalmente, nos seguintes temas: modelos paramétricos e semiparamétricos de sobrevivência, modelos de regressão, métodos computacionais em Estatística, consultoria Estatística e programação em R.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/patricia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/patricia/</guid>
+      <description>Patrícia Viana é professora de estatística na Universidade Federal de Uberlândia e faz doutorado na Universidade Federal de Minas Gerais. Cearense que já passou por São Paulo e agora com residência fixa em Minas Gerais. Já trabalhou com técnicas de simulação, equações de estimação em dados correlacionados, dados categorizados, inferência em testes diagnósticos, cópulas, etc. (Ufa!) Gosta muito de inferência Bayesiana, apesar valorizar a inferência frequentista e entender seu apelo. Tem interesse em muitos assuntos relacionados à estatística e à análise de dados, mas atualmente tem trabalhado com dados espaciais.</description>
+    </item>
+    
+  </channel>
+</rss>

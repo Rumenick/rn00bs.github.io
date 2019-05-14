@@ -7,59 +7,60 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>pt-br</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Sun, 12 May 2019 11:00:38 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 May 2019 21:45:35 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Como implementar a técnica Jackknife no R?</title>
+      <title>Como fazer o Jackknife no R?</title>
       <link>/post/jackknife/</link>
-      <pubDate>Sun, 12 May 2019 11:00:38 +0000</pubDate>
+      <pubDate>Mon, 13 May 2019 21:45:35 +0000</pubDate>
       
       <guid>/post/jackknife/</guid>
       <description>
 
 
+&lt;p&gt;Antes que o leitor prossiga é necessário compreender conceitos básicos de inferência como população, amostra, parâmetro, estatística, estimador e estimativa. Se algum desses conceitos não está claro, é recomendável uma breve consulta ao livro de Estatística Básica &lt;span class=&#34;citation&#34;&gt;Morettin and BUSSAB (2017)&lt;/span&gt; em poucos minutos, visitando as apenas as definições do capítulo 10 como essa:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;População é o conjunto de todos os elementos ou resultados sob investigação, Amostra é qualquer subconjunto da população. &lt;span class=&#34;citation&#34;&gt;Morettin and BUSSAB (2017)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Em breve escreveremos posts detalhados para cada um desses assuntos 🙏.&lt;/p&gt;
 &lt;div id=&#34;jackknife&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Jackknife&lt;/h2&gt;
-&lt;p&gt;Em estatística, o nome jacknife foi usado por &lt;span class=&#34;citation&#34;&gt;Tukey (1958)&lt;/span&gt; para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. A técnica desenvolvida por Maurice &lt;span class=&#34;citation&#34;&gt;Quenouille (1949)&lt;/span&gt; é particularmente útil em situações em que a distribuição do estimador é desconhecida e não é possível obter outras amostras da população alvo.&lt;/p&gt;
-&lt;p&gt;A alcunha &lt;em&gt;jackknife&lt;/em&gt; (“canivete”) remete à portabilidade e a possibilidade de uso em diversas situações. A ideia básica do Jackknife consiste em recalcular um particular estimador, eliminando sistematicamente cada observação individual. Similar à validação cruzada &lt;em&gt;leave-one-out&lt;/em&gt;, deixa-se sempre de fora uma (ou algumas) observações da amostra.&lt;/p&gt;
+&lt;p&gt;Em estatística, o nome jacknife foi usado por &lt;span class=&#34;citation&#34;&gt;Tukey (1958)&lt;/span&gt; para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. A alcunha &lt;em&gt;jackknife&lt;/em&gt; (“canivete”) remete à portabilidade e a possibilidade de uso em diversas situações, a técnica desenvolvida por Maurice &lt;span class=&#34;citation&#34;&gt;Quenouille (1949)&lt;/span&gt; é particularmente útil em situações em que a distribuição do estimador é desconhecida.&lt;/p&gt;
+&lt;p&gt;O Jackknife consiste em recalcular um particular estimador, eliminando sistematicamente cada observação individual. Similar à validação cruzada &lt;em&gt;leave-one-out&lt;/em&gt;, deixa-se sempre de fora uma (ou algumas) observações da amostra! Uma amostra de tamanho &lt;span class=&#34;math inline&#34;&gt;\(n = 4\)&lt;/span&gt;, por exemplo, pode ser representada da seguinte forma.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;gallery/jack.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Na prática, a aplicação do método requer apenas 3 passos.&lt;/p&gt;
 &lt;div id=&#34;estimativa-parcial&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Estimativa Parcial&lt;/h3&gt;
+&lt;h3&gt;1 - Estimativa Parcial&lt;/h3&gt;
 &lt;p&gt;A estimativa parcial &lt;span class=&#34;math inline&#34;&gt;\(\hat\theta_{-j}\)&lt;/span&gt; consiste em simplesmente recalcular o estimador para cada amostra Jack!&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat\theta_{-j}= \hat\theta(X_1, X_2, \dots, X_{j-1}, X_{j+1}, \dots, X_n)\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;pseudo-valores&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Pseudo-valores&lt;/h3&gt;
+&lt;h3&gt;2 - Pseudo-valores&lt;/h3&gt;
 &lt;p&gt;Os pseudo-valores &lt;span class=&#34;math inline&#34;&gt;\(\hat\theta_j^*\)&lt;/span&gt; farão parte do cáculo da estimativa pontual abaixo.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\hat\theta_j^*=n\hat\theta-(n-1)\hat\theta_{-j}\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;estimativa-pontual-jackknife&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Estimativa Pontual Jackknife&lt;/h3&gt;
+&lt;h3&gt;3 - Estimativa Pontual Jackknife&lt;/h3&gt;
 &lt;p&gt;A estimativa pontual Jack é a média dos pseudo-valores.
 &lt;span class=&#34;math display&#34;&gt;\[\hat\theta^* = \frac{\sum\limits_{i= 1}^n \hat\theta_j^*}{n}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Só isso? Sim! 😄 &lt;/br&gt;
+Agora vamos aplicar essa técnica no R! 🚀🚀🚀🚀&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exemplo-2.1-do-manly2006&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exemplo 2.1 do &lt;span class=&#34;citation&#34;&gt;Manly (2006)&lt;/span&gt; :&lt;/h3&gt;
 &lt;p&gt;Suponha que seja extraída uma amostra aleatória de tamanho 20 de uma certa população na qual o desvio-padrão &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; é o parâmeto de interesse. Utiliza-se o estimador
 &lt;span class=&#34;math inline&#34;&gt;\(\hat{\sigma} = \sum\limits_{i=1}^n(X_i-\bar{X})^2/n\)&lt;/span&gt; para &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;No R, o sinal de atribuição &lt;code&gt;&amp;lt;-&lt;/code&gt; atribui nome ao objeto que está à direita do sinal, nesse exemplo, “amostra” é a amostra original e n&#34; é o tamanho da amostra. O operador &lt;code&gt;c()&lt;/code&gt; concatena objetos de modo que a concatenação de numéricos forme um vetor de numéricos.&lt;/p&gt;
+&lt;p&gt;No R, o sinal de atribuição &lt;code&gt;&amp;lt;-&lt;/code&gt; atribui nome ao objeto que está à direita do sinal, nesse exemplo, “amostra” é a amostra original e “n” é o tamanho da amostra. O operador &lt;code&gt;c()&lt;/code&gt; concatena objetos de modo que a concatenação de numéricos forma um vetor numérico.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;amostra &amp;lt;- c(3.56, 0.69, 0.10, 1.84, 3.93, 1.25, 0.18, 1.13, 0.27, 0.50, 0.67,
 0.01, 0.61, 0.82, 1.70, 0.39, 0.11, 1.20, 1.21, 0.72); amostra&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] 3.56 0.69 0.10 1.84 3.93 1.25 0.18 1.13 0.27 0.50 0.67 0.01 0.61 0.82
 ## [15] 1.70 0.39 0.11 1.20 1.21 0.72&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;O tamanho da amostra é &lt;span class=&#34;math inline&#34;&gt;\(n = 20\)&lt;/span&gt;, logo teremos &lt;span class=&#34;math inline&#34;&gt;\(20\)&lt;/span&gt; amostras jack de tamanho &lt;span class=&#34;math inline&#34;&gt;\((n-1) = 19\)&lt;/span&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n  &amp;lt;-  length(amostra); n&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 20&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;theta_chapeu &amp;lt;- function(x){ 
-  xbarra &amp;lt;- mean(x)
-  desvio &amp;lt;- x-mean(x)
-  n &amp;lt;- length(x)
-  return(sqrt(sum(desvio^2)/n)) 
-} 
-
-sigma_amostra &amp;lt;- theta_chapeu(amostra); sigma_amostra&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 1.032848&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;As amostras Jackknife podem ser visualizadas em forma matricial, onde cada linha da &lt;code&gt;matrizjack&lt;/code&gt; corresponde a uma amostra. Note que, ao retirar um valor por vez são obtidas n amostras jack de tamanho n-1. Portanto, no Rscript abaixo, os valores de cada amostra bootstrap foram salvos em cada linha de um objeto do tipo &lt;code&gt;matrix&lt;/code&gt; de dimensão &lt;span class=&#34;math inline&#34;&gt;\(n \times n-1\)&lt;/span&gt; (linha x coluna), usando o &lt;code&gt;for&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;matrizjack &amp;lt;- matrix(NA, n, (n-1))
 for ( i in 1:n){
@@ -82,18 +83,37 @@ head(matrizjack)&lt;/code&gt;&lt;/pre&gt;
 ## [4,]   1.7  0.39  0.11   1.2  1.21  0.72
 ## [5,]   1.7  0.39  0.11   1.2  1.21  0.72
 ## [6,]   1.7  0.39  0.11   1.2  1.21  0.72&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimativa-parcial-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;1 - Estimativa Parcial&lt;/h3&gt;
 &lt;p&gt;Para o cálculo das estimativas parciais &lt;span class=&#34;math inline&#34;&gt;\((\hat\theta_{-1}, \hat\theta_{-2}, \dots, \hat\theta_{-n})\)&lt;/span&gt;, a função &lt;code&gt;apply&lt;/code&gt; é usada abaixo para aplicar a função estimador em todas as linhas (“1”) da &lt;code&gt;matrizjack&lt;/code&gt;, o uso de funções &lt;code&gt;apply&lt;/code&gt; evita o uso do &lt;code&gt;for&lt;/code&gt; e torna a programação computacionalmente mais eficiente (em breve teremos um post sobre códigos mais eficintes).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;theta_chapeu &amp;lt;- function(x){ 
+  xbarra &amp;lt;- mean(x)
+  desvio &amp;lt;- x-mean(x)
+  n &amp;lt;- length(x)
+  return(sqrt(sum(desvio^2)/n)) 
+} 
+
+sigma_amostra &amp;lt;- theta_chapeu(amostra); sigma_amostra&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.032848&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;theta_chapeu&lt;/code&gt; é a função que representa o estimador &lt;span class=&#34;math inline&#34;&gt;\(\hat\sigma\)&lt;/span&gt; dado na questão.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sigma_par &amp;lt;- apply(matrizjack, 1 , theta_chapeu) 
 print(sigma_par)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] 0.8788364 1.0563893 1.0360975 1.0430060 0.8134128 1.0585751 1.0399595
 ##  [8] 1.0594885 1.0438813 1.0519008 1.0560070 1.0313246 1.0547329 1.0583612
 ## [15] 1.0483872 1.0484218 1.0365998 1.0590473 1.0589633 1.0569234&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pseudo-valores-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;2 - Pseudo-valores&lt;/h3&gt;
 &lt;p&gt;Os pseudo-valores &lt;span class=&#34;math inline&#34;&gt;\((\hat\theta_{1}^*, \hat\theta_{2}^*, \dots, \hat\theta_{n}^*)\)&lt;/span&gt; são calculados de acordo com a fórmula definida acima.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pseudov &amp;lt;- n * sigma_amostra-(n-1) * sigma_par 
 print(pseudov)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] 3.9590656 0.5855601 0.9711049 0.8398438 5.2021138 0.5440315 0.8977269
 ##  [8] 0.5266770 0.8232137 0.6708425 0.5928255 1.0617899 0.6170325 0.5480939
 ## [15] 0.7376002 0.7369426 0.9615623 0.5350591 0.5366545 0.5754139&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimativa-pontual-jackknife-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;3 - Estimativa Pontual Jackknife&lt;/h3&gt;
 &lt;p&gt;A estimava pontual jackknife &lt;span class=&#34;math inline&#34;&gt;\(\hat\theta^*\)&lt;/span&gt; é dada pela média aritmética dos pseudo-valores.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estjack &amp;lt;- mean(pseudov)
 print(estjack)&lt;/code&gt;&lt;/pre&gt;
@@ -114,11 +134,18 @@ print(estjack)&lt;/code&gt;&lt;/pre&gt;
 ## 0.525173 1.667142&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div id=&#34;conclusao&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusão&lt;/h2&gt;
+&lt;p&gt;O método Jackknife é facilmente implementado, é necessário apenas conhecimento básico de inferência e um pouco de R! Considerando que a amostra provém de uma população Exponencial(1), obtivemos um intervalo de confiança que contém o real valor do parâmetro e uma estimativa pontual de aproximadamente 1.1, o que significa um erro relativo de aproximadamente 10% do valor real com uma amostra de tamanho 20.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;referencias&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;Referências&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-Manly:2006&#34;&gt;
 &lt;p&gt;Manly, Bryan FJ. 2006. &lt;em&gt;Randomization, Bootstrap and Monte Carlo Methods in Biology&lt;/em&gt;. Chapman; Hall/CRC.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Morettin:2017&#34;&gt;
+&lt;p&gt;Morettin, Pedro Alberto, and WILTON OLIVEIRA BUSSAB. 2017. &lt;em&gt;Estatı́stica Básica&lt;/em&gt;. Editora Saraiva.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Quenouille:1949&#34;&gt;
 &lt;p&gt;Quenouille, Maurice H. 1949. “Problems in Plane Sampling.” &lt;em&gt;The Annals of Mathematical Statistics&lt;/em&gt; 20 (3): 355–75.&lt;/p&gt;
@@ -143,17 +170,20 @@ print(estjack)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Imagine o seguinte cenário: você é um professor que utiliza vários softwares em suas aulas e, como professor, sua missão é a de ensinar a cada um de seus alunos como usar todos eles.
 Além disso, ainda há outro problema! Os softwares disponíveis no mercado são de alto custo e, portanto, a maioria dos alunos dificilmente terá acesso à essas ferramentas após concluírem o curso.&lt;/p&gt;
 &lt;p&gt;A questão é: Como lidar com tais softwares dada as dificuldades financeiras dos estudantes ao deixarem a universidade? De quais softwares comprar as permissões e licenças?&lt;/p&gt;
-&lt;p&gt;Bom, essa era a motivação de Ross Ihaka e Robert Gentleman. Dois professores da Universidade de Auckland (Nova Zelândia) que se depararam com esse cenário incômodo. Coincidência ou não, em 1993 Ross teve acesso a um livro chamado “&lt;em&gt;New S language&lt;/em&gt;”, que lhe trouxe uma ideia inusitada. Tomando como base as ideias da linguagem S, os dois professores produziram sua própria linguagem de computador para dar aulas sobre estatística, e deram à ela o nome de R (que faz menção ao nome de seus criadores e também faz referencia à linguagem S que originou o R).&lt;/p&gt;
-&lt;p&gt;No início, o R era apenas distribuído entre os alunos que, após as aulas levavam cópias do recém criado software para casa. Contudo, essas cópias foram sendo repassadas entre os alunos e dos alunos para a comunidade, aumentando o interesse de diversos usuários sobre a linguagem. Até que, em julho de 1995, Ross e Robert começaram a disseminar o software R publicamente, já que uma nova linguagem de programação surgira, disponibilizando-a no servidor da universidade. O sucesso do R foi tanto, que após 2 anos a linguagem já tinha visibilidade mundial e despertou o interesse de muitos desenvolvedores, inclusive John Chambers, um dos idealizadores e criadores da linguagem S.&lt;/p&gt;
+&lt;p&gt;Bom, essa era a motivação de &lt;span class=&#34;citation&#34;&gt;Ihaka and Gentleman (1996)&lt;/span&gt;. Dois professores da Universidade de Auckland (Nova Zelândia) que se depararam com esse cenário incômodo. Coincidência ou não, em 1993 Ross teve acesso a um livro chamado “&lt;em&gt;New S language&lt;/em&gt;”, que lhe trouxe uma ideia inusitada. Tomando como base as ideias da linguagem S, os dois professores produziram sua própria linguagem de computador para dar aulas sobre estatística, e deram à ela o nome de R (que faz menção ao nome de seus criadores e também faz referencia à linguagem S que originou o R).&lt;/p&gt;
+&lt;p&gt;De acordo com &lt;span class=&#34;citation&#34;&gt;Fox (2009)&lt;/span&gt;, no início, o R era apenas distribuído entre os alunos que, após as aulas levavam cópias do recém criado software para casa. Contudo, essas cópias foram sendo repassadas entre os alunos e dos alunos para a comunidade, aumentando o interesse de diversos usuários sobre a linguagem. Até que, em julho de 1995, Ross e Robert começaram a disseminar o software R publicamente, já que uma nova linguagem de programação surgira, disponibilizando-a no servidor da universidade. O sucesso do R foi tanto, que após 2 anos a linguagem já tinha visibilidade mundial e despertou o interesse de muitos desenvolvedores, inclusive John Chambers, um dos idealizadores e criadores da linguagem S.&lt;/p&gt;
 &lt;p&gt;Nos últimos anos o R se tornou o queridinho de muitas empresas, especialmente das gigantes do ramo da tecnologia, como Facebook e Google, atraídas pelas vantagens do R sobre outros softwares, como custo, rápidez e código aberto, além das excelentes funcionalidades para análises estatísticas. Curiosamente hoje, a linguagem está no top 3 das linguagens mais utilizadas por cientistas de dados e, certamente, é uma das mais utilizadas entre os estudantes da estatística, engenharia, economia, epidemiologia, medicina e àreas afins.&lt;/p&gt;
-&lt;p&gt;Silvio Cabral.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Referências:&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Fox, John. 2009 Aspects of the Social Organization and Trajectory of the R Project. R Journal.&lt;/li&gt;
-&lt;li&gt;Ihaka, Ross e Gentleman, Robert. 1996 R: A language for data analysis and graphics. Journal of Computational and Graphical Statistics.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;div id=&#34;referencias&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;Referências&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-Fox:2009&#34;&gt;
+&lt;p&gt;Fox, John. 2009. “Aspects of the Social Organization and Trajectory of the R Project.” &lt;em&gt;The R Journal&lt;/em&gt; 1 (2): 5–13.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Ihaka:1996&#34;&gt;
+&lt;p&gt;Ihaka, Ross, and Robert Gentleman. 1996. “R: A Language for Data Analysis and Graphics.” &lt;em&gt;Journal of Computational and Graphical Statistics&lt;/em&gt; 5 (3): 299–314.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -174,24 +204,22 @@ Além disso, ainda há outro problema! Os softwares disponíveis no mercado são
 &lt;div class=&#34;tab-content&#34; id=&#34;nav-tabContent&#34;&gt;
   &lt;div class=&#34;tab-pane fade show active&#34; id=&#34;nav-home&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-home-tab&#34;&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;Aula1/aula1.pdf&#34; target=&#34;_blank&#34;&gt;aula1.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;Aula1/dados.xlsx&#34; target=&#34;_blank&#34;&gt;dados.xlsx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;Aula1/dados_titanic.csv&#34; target=&#34;_blank&#34;&gt;dados_titanic.csv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;Aula1/script.R&#34; target=&#34;_blank&#34;&gt;script.R&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;i class=&#34;fa fa-download&#34;&gt;&lt;/i&gt;&lt;a href=&#34;Aula1/aula1.pdf&#34; target=&#34;_blank&#34;&gt;Slides&lt;/a&gt;&lt;/button&gt;
+&lt;/br&gt;
+&lt;button type=&#34;button class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula1/dados.xlsx&#34; target=&#34;_blank&#34;&gt;Dados&lt;/a&gt;&lt;/button&gt;
+&lt;button type=&#34;button class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula1/dados_titanic.csv&#34; target=&#34;_blank&#34;&gt;Dados Titanic&lt;/a&gt;&lt;/button&gt;
+&lt;button type=&#34;button class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula1/script.R&#34; target=&#34;_blank&#34;&gt;Código R&lt;/a&gt;&lt;/button&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/div&gt;
   &lt;div class=&#34;tab-pane fade&#34; id=&#34;nav-profile&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-profile-tab&#34;&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;Aula2/aula2.pdf&#34; target=&#34;_blank&#34;&gt;aula2.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;Aula2/beerSP.csv&#34; target=&#34;_blank&#34;&gt;beerSP.csv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;Aula2/BlackFriday.csv&#34; target=&#34;_blank&#34;&gt;BlackFriday.csv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;Aula2/dados_titanic.csv&#34; target=&#34;_blank&#34;&gt;dados_titanic.csv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;Aula2/script.R&#34; target=&#34;_blank&#34;&gt;script.R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;Aula2/tansito.csv&#34; target=&#34;_blank&#34;&gt;tansito.csv&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;i class=&#34;fa fa-download&#34;&gt;&lt;/i&gt; &lt;a href=&#34;Aula2/aula2.pdf&#34; target=&#34;_blank&#34;&gt;Slides&lt;/a&gt;&lt;/button&gt;
+&lt;/br&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula2/beerSP.csv&#34; target=&#34;_blank&#34;&gt;beerSP&lt;/a&gt;&lt;/button&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula2/BlackFriday.csv&#34; target=&#34;_blank&#34;&gt;Black Friday&lt;/a&gt;&lt;/button&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula2/dados_titanic.csv&#34; target=&#34;_blank&#34;&gt;Dados Titanic&lt;/a&gt;&lt;/button&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula2/script.R&#34; target=&#34;_blank&#34;&gt;Código R&lt;/a&gt;&lt;/button&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula2/tansito.csv&#34; target=&#34;_blank&#34;&gt;Dados Trânsito&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
