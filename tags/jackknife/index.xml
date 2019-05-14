@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Mon, 13 May 2019 21:45:35 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2019 13:26:36 +0000</lastBuildDate>
     
 	<atom:link href="/tags/jackknife/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,11 +15,12 @@
     <item>
       <title>Como fazer o Jackknife no R?</title>
       <link>/post/jackknife/</link>
-      <pubDate>Mon, 13 May 2019 21:45:35 +0000</pubDate>
+      <pubDate>Tue, 14 May 2019 13:26:36 +0000</pubDate>
       
       <guid>/post/jackknife/</guid>
-      <description>Antes que o leitor prossiga é necessário compreender conceitos básicos de inferência como população, amostra, parâmetro, estatística, estimador e estimativa. Se algum desses conceitos não está claro, é recomendável uma breve consulta ao livro de Estatística Básica Morettin and BUSSAB (2017) em poucos minutos, visitando as apenas as definições do capítulo 10 como essa:
- População é o conjunto de todos os elementos ou resultados sob investigação, Amostra é qualquer subconjunto da população.</description>
+      <description>Jackknife Em estatística, o nome jacknife foi usado por Tukey (1958) para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. O Jackknife consiste em recalcular um particular estimador, eliminando sistematicamente cada observação individual (leave-one-out)! Por exemplo, uma amostra de tamanho \(n = 4\) pode ser representada da seguinte forma:
+Figura: Representação do Jackknife em cores.  Note que,
+ Jack 1 deixa apenas a observação amarela de fora,</description>
     </item>
     
   </channel>

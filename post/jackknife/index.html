@@ -121,9 +121,9 @@
   <meta property="og:description" content="Em estatística, o nome jacknife foi usado por @Tukey:1958 para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. A técnica desenvolvida por Maurice @Quenouille:1949 é particularmente útil em situações em que a distribuição do estimador é desconhecida e não é possível obter outras amostras da população alvo."><meta property="og:image" content="/post/jackknife/featured.jpg">
   <meta property="og:locale" content="pt-br">
   
-  <meta property="article:published_time" content="2019-05-13T21:45:35&#43;00:00">
+  <meta property="article:published_time" content="2019-05-14T13:26:36&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-05-13T21:45:35&#43;00:00">
+  <meta property="article:modified_time" content="2019-05-14T13:26:36&#43;00:00">
   
 
   
@@ -398,8 +398,8 @@
 
 
 
-<meta content="2019-05-13 21:45:35 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-05-13 21:45:35 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-05-14 13:26:36 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-05-14 13:26:36 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -412,7 +412,7 @@
 
 
 
-  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/renato/">Renato Valladares Panaro</a></span>
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/renato/">Renato Valladares Panaro</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/rumenick/">Rume(Nick) Pereira da Silva</a></span>
 
   </div>
   
@@ -424,7 +424,7 @@
     
       
     
-    <time>May 13, 2019</time>
+    <time>May 14, 2019</time>
   </span>
   
 
@@ -575,8 +575,8 @@
 
 
 
-<meta content="2019-05-13 21:45:35 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-05-13 21:45:35 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-05-14 13:26:36 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-05-14 13:26:36 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -589,7 +589,7 @@
 
 
 
-  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/renato/">Renato Valladares Panaro</a></span>
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/renato/">Renato Valladares Panaro</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/rumenick/">Rume(Nick) Pereira da Silva</a></span>
 
   </div>
   
@@ -601,7 +601,7 @@
     
       
     
-    <time>May 13, 2019</time>
+    <time>May 14, 2019</time>
   </span>
   
 
@@ -739,38 +739,47 @@
       
 
 
-<p>Antes que o leitor prossiga é necessário compreender conceitos básicos de inferência como população, amostra, parâmetro, estatística, estimador e estimativa. Se algum desses conceitos não está claro, é recomendável uma breve consulta ao livro de Estatística Básica <span class="citation">Morettin and BUSSAB (2017)</span> em poucos minutos, visitando as apenas as definições do capítulo 10 como essa:</p>
-<blockquote>
-<p>População é o conjunto de todos os elementos ou resultados sob investigação, Amostra é qualquer subconjunto da população. <span class="citation">Morettin and BUSSAB (2017)</span></p>
-</blockquote>
-<p>Em breve escreveremos posts detalhados para cada um desses assuntos 🙏.</p>
-<div id="jackknife" class="section level2">
-<h2>Jackknife</h2>
-<p>Em estatística, o nome jacknife foi usado por <span class="citation">Tukey (1958)</span> para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. A alcunha <em>jackknife</em> (“canivete”) remete à portabilidade e a possibilidade de uso em diversas situações, a técnica desenvolvida por Maurice <span class="citation">Quenouille (1949)</span> é particularmente útil em situações em que a distribuição do estimador é desconhecida.</p>
-<p>O Jackknife consiste em recalcular um particular estimador, eliminando sistematicamente cada observação individual. Similar à validação cruzada <em>leave-one-out</em>, deixa-se sempre de fora uma (ou algumas) observações da amostra! Uma amostra de tamanho <span class="math inline">\(n = 4\)</span>, por exemplo, pode ser representada da seguinte forma.</p>
-<p><img src="gallery/jack.png" /></p>
-<p>Na prática, a aplicação do método requer apenas 3 passos.</p>
-<div id="estimativa-parcial" class="section level3">
-<h3>1 - Estimativa Parcial</h3>
-<p>A estimativa parcial <span class="math inline">\(\hat\theta_{-j}\)</span> consiste em simplesmente recalcular o estimador para cada amostra Jack!</p>
-<p><span class="math display">\[\hat\theta_{-j}= \hat\theta(X_1, X_2, \dots, X_{j-1}, X_{j+1}, \dots, X_n)\]</span></p>
+<div style="text-align: justify">
+<h2 id="jackknife">Jackknife</h2>
+<p>Em estatística, o nome jacknife foi usado por <span class="citation">Tukey (1958)</span> para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. O Jackknife consiste em recalcular um particular estimador, eliminando sistematicamente cada observação individual (<em>leave-one-out</em>)! Por exemplo, uma amostra de tamanho <span class="math inline">\(n = 4\)</span> pode ser representada da seguinte forma:</p>
+<div style="text-align:center">
+<img src="gallery/jack.png" />Figura: Representação do Jackknife em cores.
 </div>
-<div id="pseudo-valores" class="section level3">
-<h3>2 - Pseudo-valores</h3>
-<p>Os pseudo-valores <span class="math inline">\(\hat\theta_j^*\)</span> farão parte do cáculo da estimativa pontual abaixo.</p>
-<p><span class="math display">\[\hat\theta_j^*=n\hat\theta-(n-1)\hat\theta_{-j}\]</span></p>
-</div>
-<div id="estimativa-pontual-jackknife" class="section level3">
-<h3>3 - Estimativa Pontual Jackknife</h3>
-<p>A estimativa pontual Jack é a média dos pseudo-valores.
-<span class="math display">\[\hat\theta^* = \frac{\sum\limits_{i= 1}^n \hat\theta_j^*}{n}\]</span></p>
-<p>Só isso? Sim! 😄 </br>
-Agora vamos aplicar essa técnica no R! 🚀🚀🚀🚀</p>
-</div>
-<div id="exemplo-2.1-do-manly2006" class="section level3">
-<h3>Exemplo 2.1 do <span class="citation">Manly (2006)</span> :</h3>
-<p>Suponha que seja extraída uma amostra aleatória de tamanho 20 de uma certa população na qual o desvio-padrão <span class="math inline">\(\sigma\)</span> é o parâmeto de interesse. Utiliza-se o estimador
-<span class="math inline">\(\hat{\sigma} = \sum\limits_{i=1}^n(X_i-\bar{X})^2/n\)</span> para <span class="math inline">\(\sigma\)</span>.</p>
+<p>Note que,</p>
+<ul>
+<li><p>Jack 1 deixa apenas a observação amarela de fora,</p></li>
+<li><p>Jack 2 retoma a observação excluída anteriormente (amarela) e deixa de fora a observação verde, assim por diante.</p></li>
+<li><p>As cores das caselas representam observações que na prática são mensurações de um particular evento (números), que inclusive podem coincidir.</p></li>
+<li><p>Deixa-se de fora um por vez até que se obtenha n amotras, cada uma composta pelas observações da amostra original exceto a j-ésima observação.</p></li>
+</ul>
+<h3 id="estimativa-pontual">Estimativa Pontual</h3>
+<p>Todo estimador necessariamente é uma estatítica, e portanto, é uma função da amostra que não depende do parâmetro de interesse, quando um estimador <span class="math inline">\(\hat\theta\)</span> é aplicado na amostra <span class="math inline">\((x_1, x_2, \dots, x_n)\)</span>, obtemos uma estimavativa <span class="math inline">\(t = \hat\theta(x_1, x_2, \dots, x_n)\)</span>, em que t é um valor real.</p>
+<p><strong>Exemplo:</strong> Considere o estimador <span class="math inline">\(\hat\theta = \bar X = \sum\limits_{i=1}^nX_i/n\)</span> para a média populacional <span class="math inline">\(\theta\)</span>.</p>
+<p>Dada uma amostra <span class="math inline">\((x_1, x_2, x_3, x_4) = (1,2,3,4)\)</span>:</p>
+<ul>
+<li>O estimador para <span class="math inline">\(\theta\)</span> é <span class="math inline">\(\hat\theta = \bar X\)</span>.</li>
+<li>A estimativa pontual é <span class="math display">\[\hat\theta(x_1, x_2, x_3, x_4) = \sum\limits_{i=1}^4x_i/4  = \frac{1+2+3+4}{4} = 2,5.\]</span>
+Isto é, <span class="math inline">\(t = 2,5.\)</span></li>
+</ul>
+<h2 id="pseudo-valores-e-estimativa-pontual-jack">Pseudo-valores e estimativa pontual Jack</h2>
+<p>Na prática, a aplicação do método requer apenas 3 passos:</p>
+<h3 id="estimativa-parcial">1 - Estimativa Parcial</h3>
+<p>Dada uma amostra <span class="math inline">\((x_1, x_2, \dots, x_n)\)</span> qualquer, e um estimador para o parâmetro de interesse, a estimativa parcial <span class="math inline">\(t_{-j}\)</span> consiste em simplesmente obter estimativas pontuais para cada amostra Jack!</p>
+<p><span class="math display">\[t_{-j}= \hat\theta(x_1, x_2, \dots, x_{j-1}, x_{j+1}, \dots, x_n)\]</span></p>
+<h3 id="pseudo-valores">2 - Pseudo-valores</h3>
+<p>Os pseudo-valores <span class="math inline">\(t_j^*\)</span> farão parte do cáculo da estimativa pontual jack abaixo.</p>
+<p><span class="math display">\[t_j^*=nt-(n-1) t_{-j}\]</span></p>
+<h3 id="estimativa-pontual-jackknife">3 - Estimativa Pontual Jackknife</h3>
+<p>A estimativa pontual Jack é a média aritmética dos pseudo-valores.
+<span class="math display">\[t^* = \frac{\sum\limits_{i= 1}^n t_j^*}{n}\]</span></p>
+<p>Só isso? Sim! 😄 </br></p>
+<h3 id="exemplo-2.1-do-manly2006">Exemplo 2.1 do <span class="citation">Manly (2006)</span> :</h3>
+<p>Suponha que seja extraída uma amostra aleatória de tamanho 20 de uma certa população na qual o desvio-padrão <span class="math inline">\(\sigma\)</span> é o parâmeto de interesse.</p>
+<p><span class="math inline">\(3,56; 0,69; 0,10; 1,84; 3,93; 1,25; 0,18; 1,13; 0,27; 0,50; 0,67; 0,01; 0,61; 0,82; 1,70; 0,39; 0,11; 1,20; 1,21; 0,72\)</span></p>
+<p>Utiliza-se o estimador
+<span class="math inline">\(\hat{\sigma} = \sum\limits_{i=1}^n(X_i-\bar{X})^2/n\)</span> para obter uma estimativa intervalar para <span class="math inline">\(\sigma\)</span>.</p>
+<p><strong>Obs</strong>.: Com uma amostra de tamanho 20, não é recomendável fazer suposições sobre a distribuição da amostra ou do estimador. Além disso, não se sabe qual é a distribuição da população da qual provém a amostra. No entanto, com o uso do intervalo jackknife, é possível obter uma estimativa intervalar para o parâmetro.</p>
+<p>Agora vamos aplicar essa técnica de reamostragem no R! 🚀🚀🚀🚀</p>
 <p>No R, o sinal de atribuição <code>&lt;-</code> atribui nome ao objeto que está à direita do sinal, nesse exemplo, “amostra” é a amostra original e “n” é o tamanho da amostra. O operador <code>c()</code> concatena objetos de modo que a concatenação de numéricos forma um vetor numérico.</p>
 <pre class="r"><code>amostra &lt;- c(3.56, 0.69, 0.10, 1.84, 3.93, 1.25, 0.18, 1.13, 0.27, 0.50, 0.67,
 0.01, 0.61, 0.82, 1.70, 0.39, 0.11, 1.20, 1.21, 0.72); amostra</code></pre>
@@ -801,10 +810,8 @@ head(matrizjack)</code></pre>
 ## [4,]   1.7  0.39  0.11   1.2  1.21  0.72
 ## [5,]   1.7  0.39  0.11   1.2  1.21  0.72
 ## [6,]   1.7  0.39  0.11   1.2  1.21  0.72</code></pre>
-</div>
-<div id="estimativa-parcial-1" class="section level3">
-<h3>1 - Estimativa Parcial</h3>
-<p>Para o cálculo das estimativas parciais <span class="math inline">\((\hat\theta_{-1}, \hat\theta_{-2}, \dots, \hat\theta_{-n})\)</span>, a função <code>apply</code> é usada abaixo para aplicar a função estimador em todas as linhas (“1”) da <code>matrizjack</code>, o uso de funções <code>apply</code> evita o uso do <code>for</code> e torna a programação computacionalmente mais eficiente (em breve teremos um post sobre códigos mais eficintes).</p>
+<h3 id="estimativa-parcial-1">1 - Estimativa Parcial</h3>
+<p>Para o cálculo das estimativas parciais <span class="math inline">\((t_{-1}, t_{-2}, \dots, t_{-n})\)</span>, a função <code>apply</code> é usada abaixo para aplicar a função estimador em todas as linhas (“1”) da <code>matrizjack</code>, o uso de funções <code>apply</code> evita o uso do <code>for</code> e torna a programação computacionalmente mais eficiente (em breve teremos um post sobre códigos mais eficintes).</p>
 <pre class="r"><code>theta_chapeu &lt;- function(x){ 
   xbarra &lt;- mean(x)
   desvio &lt;- x-mean(x)
@@ -820,27 +827,21 @@ print(sigma_par)</code></pre>
 <pre><code>##  [1] 0.8788364 1.0563893 1.0360975 1.0430060 0.8134128 1.0585751 1.0399595
 ##  [8] 1.0594885 1.0438813 1.0519008 1.0560070 1.0313246 1.0547329 1.0583612
 ## [15] 1.0483872 1.0484218 1.0365998 1.0590473 1.0589633 1.0569234</code></pre>
-</div>
-<div id="pseudo-valores-1" class="section level3">
-<h3>2 - Pseudo-valores</h3>
-<p>Os pseudo-valores <span class="math inline">\((\hat\theta_{1}^*, \hat\theta_{2}^*, \dots, \hat\theta_{n}^*)\)</span> são calculados de acordo com a fórmula definida acima.</p>
+<h3 id="pseudo-valores-1">2 - Pseudo-valores</h3>
+<p>Os pseudo-valores <span class="math inline">\((t_{1}^*, t_{2}^*, \dots, t_{n}^*)\)</span> são calculados de acordo com a fórmula definida acima.</p>
 <pre class="r"><code>pseudov &lt;- n * sigma_amostra-(n-1) * sigma_par 
 print(pseudov)</code></pre>
 <pre><code>##  [1] 3.9590656 0.5855601 0.9711049 0.8398438 5.2021138 0.5440315 0.8977269
 ##  [8] 0.5266770 0.8232137 0.6708425 0.5928255 1.0617899 0.6170325 0.5480939
 ## [15] 0.7376002 0.7369426 0.9615623 0.5350591 0.5366545 0.5754139</code></pre>
-</div>
-<div id="estimativa-pontual-jackknife-1" class="section level3">
-<h3>3 - Estimativa Pontual Jackknife</h3>
-<p>A estimava pontual jackknife <span class="math inline">\(\hat\theta^*\)</span> é dada pela média aritmética dos pseudo-valores.</p>
+<h3 id="estimativa-pontual-jackknife-1">3 - Estimativa Pontual Jackknife</h3>
+<p>A estimava pontual jackknife <span class="math inline">\(t^*\)</span> é dada pela média aritmética dos pseudo-valores.</p>
 <pre class="r"><code>estjack &lt;- mean(pseudov)
 print(estjack)</code></pre>
 <pre><code>## [1] 1.096158</code></pre>
-</div>
-<div id="estimativa-intervalar" class="section level3">
-<h3>Estimativa Intervalar</h3>
+<h3 id="estimativa-intervalar">Estimativa Intervalar</h3>
 <p>Segundo <span class="citation">Manly (2006)</span>, a estimativa intervalar aproximada para <span class="math inline">\(\theta\)</span> a um nível de <span class="math inline">\(100(1-\alpha)\)</span> de confiança é dada por um intervalo de confiança <span class="math inline">\(t\)</span>-Student:</p>
-<p><span class="math display">\[\left[\hat\theta^* \pm t_{\frac{\alpha}{2}, (n-1)}\frac{s}{\sqrt{n}}\right]\]</span></p>
+<p><span class="math display">\[\left[t^* \pm t_{\frac{\alpha}{2}, (n-1)}\frac{s}{\sqrt{n}}\right]\]</span></p>
 <p>Ao fixar <span class="math inline">\(\alpha = 0,05\)</span>, temos o intervalo Jackknife de 95% de confiança:</p>
 <pre class="r"><code> alfa &lt;- 1-0.95  
  s &lt;- sd(pseudov)
@@ -850,14 +851,16 @@ print(estjack)</code></pre>
  c(&quot;L&quot;=L,&quot;U&quot;=U) </code></pre>
 <pre><code>##        L        U 
 ## 0.525173 1.667142</code></pre>
+<h2 id="conclusao">Conclusão</h2>
+<p>O termo <em>jackknife</em> (em tradução livre canivete) remete à portabilidade e a possibilidade de uso em diversas situações. Essa técnica, desenvolvida por Maurice <span class="citation">Quenouille (1949)</span>, é particularmente útil em situações em que a distribuição do estimador é desconhecida. O método Jackknife não é computacionalmente intensivo e é facilmente implementado com conhecimento básico em inferência e um pouco de R! Considerando que a amostra provém de uma população Exponencial(1), obtivemos um intervalo de confiança que contém o real valor do parâmetro com uma amostra de tamanho 20, usando um estimador da qual não sabemos a distribuição.</p>
+<h2 id="nota">Nota</h2>
+<p>Para aplicar o método é necessário compreender alguns conceitos básicos de inferência como população, amostra, parâmetro, estatística, estimador e estimativa. Se algum desses conceitos não está claro, é recomendável uma breve consulta ao livro de Estatística Básica <span class="citation">Morettin and BUSSAB (2017)</span>. Em poucos minutos, é possível visitar apenas as definições do capítulo 10 como essa:</p>
+<blockquote>
+<p>População é o conjunto de todos os elementos ou resultados sob investigação, Amostra é qualquer subconjunto da população. <span class="citation">Morettin and BUSSAB (2017)</span></p>
+</blockquote>
+<p>Em breve escreveremos um glossário detalhado para cada um desses conceitos 🙏.</p>
+<h2 id="referencias">Referências</h2>
 </div>
-</div>
-<div id="conclusao" class="section level2">
-<h2>Conclusão</h2>
-<p>O método Jackknife é facilmente implementado, é necessário apenas conhecimento básico de inferência e um pouco de R! Considerando que a amostra provém de uma população Exponencial(1), obtivemos um intervalo de confiança que contém o real valor do parâmetro e uma estimativa pontual de aproximadamente 1.1, o que significa um erro relativo de aproximadamente 10% do valor real com uma amostra de tamanho 20.</p>
-</div>
-<div id="referencias" class="section level2 unnumbered">
-<h2>Referências</h2>
 <div id="refs" class="references">
 <div id="ref-Manly:2006">
 <p>Manly, Bryan FJ. 2006. <em>Randomization, Bootstrap and Monte Carlo Methods in Biology</em>. Chapman; Hall/CRC.</p>
@@ -870,7 +873,6 @@ print(estjack)</code></pre>
 </div>
 <div id="ref-Tukey:1958">
 <p>Tukey, John. 1958. “Bias and Confidence in Not Quite Large Samples.” <em>Ann. Math. Statist.</em> 29: 614.</p>
-</div>
 </div>
 </div>
 

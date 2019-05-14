@@ -4,10 +4,6 @@ amostra <- c(3.56, 0.69, 0.10, 1.84, 3.93, 1.25, 0.18, 1.13, 0.27, 0.50, 0.67,
              0.01, 0.61, 0.82, 1.70, 0.39, 0.11, 1.20, 1.21, 0.72); amostra
 n  <-  length(amostra); n
 
-amostra <- c(3.56, 0.69, 0.10, 1.84, 3.93, 1.25, 0.18, 1.13, 0.27, 0.50, 0.67,
-             0.01, 0.61, 0.82, 1.70, 0.39, 0.11, 1.20, 1.21, 0.72); amostra
-n  <-  length(amostra); n
-
 matrizjack <- matrix(NA, n, (n-1))
 for ( i in 1:n){
   amostrajack <-amostra[-i]
@@ -15,6 +11,15 @@ for ( i in 1:n){
 }
 
 head(matrizjack)
+
+theta_chapeu <- function(x){ 
+  xbarra <- mean(x)
+  desvio <- x-mean(x)
+  n <- length(x)
+  return(sqrt(sum(desvio^2)/n)) 
+} 
+
+sigma_amostra <- theta_chapeu(amostra); sigma_amostra
 
 sigma_par <- apply(matrizjack, 1 , theta_chapeu) 
 print(sigma_par)
