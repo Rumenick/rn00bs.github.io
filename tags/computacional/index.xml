@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Tue, 14 May 2019 13:26:36 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2019 13:45:50 +0000</lastBuildDate>
     
 	<atom:link href="/tags/computacional/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Como fazer o Jackknife no R?</title>
       <link>/post/jackknife/</link>
-      <pubDate>Tue, 14 May 2019 13:26:36 +0000</pubDate>
+      <pubDate>Tue, 14 May 2019 13:45:50 +0000</pubDate>
       
       <guid>/post/jackknife/</guid>
       <description>Jackknife Em estatística, o nome jacknife foi usado por Tukey (1958) para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. O Jackknife consiste em recalcular um particular estimador, eliminando sistematicamente cada observação individual (leave-one-out)! Por exemplo, uma amostra de tamanho \(n = 4\) pode ser representada da seguinte forma:

@@ -121,9 +121,9 @@
   <meta property="og:description" content="Em estatística, o nome jacknife foi usado por @Tukey:1958 para descrever uma perspectiva geral para realizar testes de hipóteses e calcular intervalos de confiança. A técnica desenvolvida por Maurice @Quenouille:1949 é particularmente útil em situações em que a distribuição do estimador é desconhecida e não é possível obter outras amostras da população alvo."><meta property="og:image" content="/post/jackknife/featured.jpg">
   <meta property="og:locale" content="pt-br">
   
-  <meta property="article:published_time" content="2019-05-14T13:26:36&#43;00:00">
+  <meta property="article:published_time" content="2019-05-14T13:45:50&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-05-14T13:26:36&#43;00:00">
+  <meta property="article:modified_time" content="2019-05-14T13:45:50&#43;00:00">
   
 
   
@@ -398,8 +398,8 @@
 
 
 
-<meta content="2019-05-14 13:26:36 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-05-14 13:26:36 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-05-14 13:45:50 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-05-14 13:45:50 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -575,8 +575,8 @@
 
 
 
-<meta content="2019-05-14 13:26:36 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-05-14 13:26:36 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-05-14 13:45:50 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-05-14 13:45:50 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -780,7 +780,7 @@ Isto é, <span class="math inline">\(t = 2,5.\)</span></li>
 <span class="math inline">\(\hat{\sigma} = \sum\limits_{i=1}^n(X_i-\bar{X})^2/n\)</span> para obter uma estimativa intervalar para <span class="math inline">\(\sigma\)</span>.</p>
 <p><strong>Obs</strong>.: Com uma amostra de tamanho 20, não é recomendável fazer suposições sobre a distribuição da amostra ou do estimador. Além disso, não se sabe qual é a distribuição da população da qual provém a amostra. No entanto, com o uso do intervalo jackknife, é possível obter uma estimativa intervalar para o parâmetro.</p>
 <p>Agora vamos aplicar essa técnica de reamostragem no R! 🚀🚀🚀🚀</p>
-<p>No R, o sinal de atribuição <code>&lt;-</code> atribui nome ao objeto que está à direita do sinal, nesse exemplo, “amostra” é a amostra original e “n” é o tamanho da amostra. O operador <code>c()</code> concatena objetos de modo que a concatenação de numéricos forma um vetor numérico.</p>
+<!-- No R, o sinal de atribuição `<-`  atribui nome ao objeto que está à direita do sinal, nesse exemplo, "amostra" é a amostra original e "n" é o tamanho da amostra. O operador `c()` concatena objetos de modo que a concatenação de numéricos forma um vetor numérico.  -->
 <pre class="r"><code>amostra &lt;- c(3.56, 0.69, 0.10, 1.84, 3.93, 1.25, 0.18, 1.13, 0.27, 0.50, 0.67,
 0.01, 0.61, 0.82, 1.70, 0.39, 0.11, 1.20, 1.21, 0.72); amostra</code></pre>
 <pre><code>##  [1] 3.56 0.69 0.10 1.84 3.93 1.25 0.18 1.13 0.27 0.50 0.67 0.01 0.61 0.82
@@ -788,7 +788,8 @@ Isto é, <span class="math inline">\(t = 2,5.\)</span></li>
 <p>O tamanho da amostra é <span class="math inline">\(n = 20\)</span>, logo teremos <span class="math inline">\(20\)</span> amostras jack de tamanho <span class="math inline">\((n-1) = 19\)</span>.</p>
 <pre class="r"><code>n  &lt;-  length(amostra); n</code></pre>
 <pre><code>## [1] 20</code></pre>
-<p>As amostras Jackknife podem ser visualizadas em forma matricial, onde cada linha da <code>matrizjack</code> corresponde a uma amostra. Note que, ao retirar um valor por vez são obtidas n amostras jack de tamanho n-1. Portanto, no Rscript abaixo, os valores de cada amostra bootstrap foram salvos em cada linha de um objeto do tipo <code>matrix</code> de dimensão <span class="math inline">\(n \times n-1\)</span> (linha x coluna), usando o <code>for</code>.</p>
+<p>As amostras Jackknife podem ser visualizadas em forma matricial, onde cada linha da <code>matrizjack</code> corresponde a uma amostra, no Rscript, foi feito usando o comando <code>for</code>.</p>
+<!-- t abaixo, os valores de cada amostra jackknife foram salvos em cada linha de um objeto do tipo `matrix` de dimensão $n \times n-1$ (linha x coluna), usando o `for`. -->
 <pre class="r"><code>matrizjack &lt;- matrix(NA, n, (n-1))
 for ( i in 1:n){
   amostrajack &lt;-amostra[-i]
@@ -819,17 +820,17 @@ head(matrizjack)</code></pre>
   return(sqrt(sum(desvio^2)/n)) 
 } 
 
-sigma_amostra &lt;- theta_chapeu(amostra); sigma_amostra</code></pre>
+t_amostra &lt;- theta_chapeu(amostra); t_amostra</code></pre>
 <pre><code>## [1] 1.032848</code></pre>
 <p><code>theta_chapeu</code> é a função que representa o estimador <span class="math inline">\(\hat\sigma\)</span> dado na questão.</p>
-<pre class="r"><code>sigma_par &lt;- apply(matrizjack, 1 , theta_chapeu) 
-print(sigma_par)</code></pre>
+<pre class="r"><code>t_par &lt;- apply(matrizjack, 1 , theta_chapeu) 
+print(t_par)</code></pre>
 <pre><code>##  [1] 0.8788364 1.0563893 1.0360975 1.0430060 0.8134128 1.0585751 1.0399595
 ##  [8] 1.0594885 1.0438813 1.0519008 1.0560070 1.0313246 1.0547329 1.0583612
 ## [15] 1.0483872 1.0484218 1.0365998 1.0590473 1.0589633 1.0569234</code></pre>
 <h3 id="pseudo-valores-1">2 - Pseudo-valores</h3>
 <p>Os pseudo-valores <span class="math inline">\((t_{1}^*, t_{2}^*, \dots, t_{n}^*)\)</span> são calculados de acordo com a fórmula definida acima.</p>
-<pre class="r"><code>pseudov &lt;- n * sigma_amostra-(n-1) * sigma_par 
+<pre class="r"><code>pseudov &lt;- n * t_amostra-(n-1) * t_par 
 print(pseudov)</code></pre>
 <pre><code>##  [1] 3.9590656 0.5855601 0.9711049 0.8398438 5.2021138 0.5440315 0.8977269
 ##  [8] 0.5266770 0.8232137 0.6708425 0.5928255 1.0617899 0.6170325 0.5480939

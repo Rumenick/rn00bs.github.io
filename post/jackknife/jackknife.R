@@ -19,12 +19,12 @@ theta_chapeu <- function(x){
   return(sqrt(sum(desvio^2)/n)) 
 } 
 
-sigma_amostra <- theta_chapeu(amostra); sigma_amostra
+t_amostra <- theta_chapeu(amostra); t_amostra
 
-sigma_par <- apply(matrizjack, 1 , theta_chapeu) 
-print(sigma_par)
+t_par <- apply(matrizjack, 1 , theta_chapeu) 
+print(t_par)
 
-pseudov <- n * sigma_amostra-(n-1) * sigma_par 
+pseudov <- n * t_amostra-(n-1) * t_par 
 print(pseudov)
 
 estjack <- mean(pseudov)
