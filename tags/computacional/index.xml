@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Tue, 14 May 2019 13:45:50 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2019 16:23:27 +0000</lastBuildDate>
     
 	<atom:link href="/tags/computacional/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introdução ao Bootstrap</title>
+      <link>/post/bootstrap/</link>
+      <pubDate>Wed, 15 May 2019 16:23:27 +0000</pubDate>
+      
+      <guid>/post/bootstrap/</guid>
+      <description>Métodos Bootstrap O Bootstrap foi uma das primeiras técnicas estatísticas intensivas de reamostragem para computar a variância de um conjunto de dados estatísticos, construir intervalos de confiança e realizar testes de hipóteses sobre parâmetros de interesse, esse método foi introduzido pelo estatístico estadunidense Bradley Efron em 1979. Efron seguiu o espírito de Tuckey para nomear a técnica (veja o post sobre jackknife).
+ Bootstrap methods: another look at the jackknife, Efron (1979).</description>
+    </item>
     
     <item>
       <title>Como fazer o Jackknife no R?</title>

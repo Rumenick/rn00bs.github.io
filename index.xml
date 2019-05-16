@@ -7,10 +7,130 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>pt-br</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Tue, 14 May 2019 13:45:50 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2019 16:23:27 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introdução ao Bootstrap</title>
+      <link>/post/bootstrap/</link>
+      <pubDate>Wed, 15 May 2019 16:23:27 +0000</pubDate>
+      
+      <guid>/post/bootstrap/</guid>
+      <description>
+
+
+&lt;div style=&#34;text-align: justify&#34;&gt;
+&lt;h2 id=&#34;metodos-bootstrap&#34;&gt;Métodos Bootstrap&lt;/h2&gt;
+&lt;p&gt;O Bootstrap foi uma das primeiras técnicas estatísticas intensivas de reamostragem para computar a variância de um conjunto de dados estatísticos, construir intervalos de confiança e realizar testes de hipóteses sobre parâmetros de interesse, esse método foi introduzido pelo estatístico estadunidense Bradley Efron em 1979. Efron seguiu o espírito de Tuckey para nomear a técnica (veja o &lt;a href=&#34;/post/jackknife/&#34;&gt;post&lt;/a&gt; sobre jackknife).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Bootstrap methods: another look at the jackknife&lt;/em&gt;, &lt;span class=&#34;citation&#34;&gt;Efron (1979)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;o-termo-bootstrap&#34;&gt;O termo Bootstrap&lt;/h2&gt;
+&lt;p&gt;Em inglês, bootstrap é sinônimo de alça da bota, logo, remete a algo que precisa ser alavancado por esforço próprio. A forma abreviada “boot” é muito popular quando usada para referir-se aos comandos iniciais necessários para carregar o sistema operacional do computador, &lt;span class=&#34;citation&#34;&gt;Oxford (2014)&lt;/span&gt;. Porém, segundo &lt;span class=&#34;citation&#34;&gt;Scholz (2007)&lt;/span&gt;, a motivação foi fazer uma analogia ao ato de puxar a si mesmo e seu cavalo para fora de um atoleiro, como na ficção &lt;strong&gt;As Aventuras do Barão Munchausen&lt;/strong&gt;. O detalhe é que na ficção o Barão usa como recurso o seu próprio rabo de cavalo e não a alça da bota, no entanto, essa versão para a motivação de Efron ganhou força após tradução do artigo de &lt;span class=&#34;citation&#34;&gt;Diaconis and Efron (1983)&lt;/span&gt; para alemão em que o uso da expressão “die M¨unchhausen Methode” é feito pelos autores.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;gallery/baron.jpg&#34;&gt;
+Figura: Capa do Livro &lt;strong&gt;Aventuras do Barão Munchausen&lt;/strong&gt;.&lt;/img&gt;&lt;/p&gt;
+&lt;h2 id=&#34;a-ideia-do-metodo&#34;&gt;A ideia do método&lt;/h2&gt;
+&lt;p&gt;Em estatística, os métodos de bootstrap são uma classe de métodos que estimam a distribuição de uma população por reamostragem. A amostra observada é tratada como uma população e amostras aleatórias com reposição são geradas (reamostradas) a partir dela. Com o bootstrap ou bootstrapping é possível estudar características da população a partir dessa pseudo-população e extrair inferências.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;gallery/bootstrapping.png&#34;&gt;
+Figura: Representação do Bootstrap com B=3 e n=5.&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Na Figura,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A amostra Bootstrap é do mesmo tamanho (n = 5) da amostra original.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Cada amostra Boostrap nada mais é do que uma reamostra, ou seja, uma amostragem simples com reposição feita a partir da amostra original.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O fato de ser com reposição significa que o valor é reposto ao conjunto de possíveis valores de retirada.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;B é o número arbitrário de réplicas (número de reamostras) bootstrap.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;distribuicao-da-amostra-bootstrap-f_x-e-distribuicao-empirica-f_n&#34;&gt;Distribuição da Amostra Bootstrap &lt;span class=&#34;math inline&#34;&gt;\(F_{X^*}\)&lt;/span&gt; e Distribuição Empírica &lt;span class=&#34;math inline&#34;&gt;\(F_n\)&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Suponha que &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{x} = (x_1, \dots, x_n)\)&lt;/span&gt; é uma amostra aleatória (a.a.) observada de uma distribuição &lt;span class=&#34;math inline&#34;&gt;\(F_X\)&lt;/span&gt;. Se &lt;span class=&#34;math inline&#34;&gt;\(X^*\)&lt;/span&gt; representa a seleção de uma observação aleatoriamente de &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{x}\)&lt;/span&gt;, então,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[p = P(X^* = x_i) = \frac{1}{n}, ~~~i=1,\dots,n.\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Logo, gera-se uma amostra &lt;span class=&#34;math inline&#34;&gt;\(X^*_1,X^*_2, \dots, X^*_n\)&lt;/span&gt; independente e identicamente distribuída (i.i.d.) com distribuição uniforme discreta no conjunto &lt;span class=&#34;math inline&#34;&gt;\(\{{x_1, \dots, x_n}\}.\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exemplo 7.1 - &lt;span class=&#34;citation&#34;&gt;Rizzo (2007)&lt;/span&gt;:&lt;/strong&gt; Suponha &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{x} = \{2,2,1,1,5,4,4,3,1,2\}\)&lt;/span&gt; uma a.a. observada de tamanho 10. Note que, dada amostra aleatória &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{x}\)&lt;/span&gt;, há 5 valores possíveis para formar uma reamostra &lt;span class=&#34;math inline&#34;&gt;\(X^*\)&lt;/span&gt; de &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{x}\)&lt;/span&gt; com probabilidades:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(X = k) = \begin{cases}
+0,3; \text{ se } k = 1 \\
+0,3; \text{ se } k = 2 \\
+0,1; \text{ se } k = 3 \\
+0,2; \text{ se } k = 4 \\
+0,1; \text{ se } k = 5 \\
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Note que cada elemento &lt;span class=&#34;math inline&#34;&gt;\(x_i\)&lt;/span&gt; pertencente ao conjunto &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{x}=\{x_1, x_2, x_3, \dots, x_{10}\} =\{2,2,1,1,5,4,4,3,1,2\}\)&lt;/span&gt; tem probabilidade de retirada &lt;span class=&#34;math inline&#34;&gt;\(p = \frac{1}{10}\)&lt;/span&gt;, logo, as probabilidades são somadas a medida que os valores se repetem nesse conjunto.&lt;/p&gt;
+&lt;p&gt;Visualização no R:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- c(2,2,1,1,5,4,4,3,1,2)
+n &amp;lt;- length(x)
+barplot(table(x)/n, bty = &amp;quot;n&amp;quot;, ylab = expression(P[X](k)),
+        xlab = expression(x[i]), col = &amp;quot;darkblue&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/bootstrap/index_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Perceba que a distribuição acumulada &lt;span class=&#34;math inline&#34;&gt;\(F_{X*}\)&lt;/span&gt; da amostra bootstrap coincide com a distribuição empírica que pode ser usada como aproximação de &lt;span class=&#34;math inline&#34;&gt;\(F_X\)&lt;/span&gt;,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[F_n(k) = F_{X^*}(k) = \begin{cases}
+0; \text{ se } k &amp;lt; 1\\
+0,3; \text{ se } 1 \le k &amp;lt; 2\\
+0,6; \text{ se } 2 \le k &amp;lt; 3 \\
+0,7; \text{ se } 3 \le k &amp;lt; 4 \\
+0,9; \text{ se } 4 \le k &amp;lt; 5\\
+1; \text{ se } k \ge 5.
+\end{cases}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;No R é possível visualizar que as duas distribuições coincidem, logo, reamostrar de &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{x}\)&lt;/span&gt; equivale a gerar valores da distribuição &lt;span class=&#34;math inline&#34;&gt;\(F_n(x)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow = c(1,2))
+barplot(c(c(&amp;#39;0&amp;#39;=0), cumsum(table(x)/n)), bty = &amp;quot;n&amp;quot;, 
+        main = &amp;quot;Dist. Acumulada&amp;quot;, ylab = expression(F[X](k)),
+        xlab = expression(x[i]), col = &amp;quot;darkblue&amp;quot;)
+
+plot(ecdf(x), main = &amp;quot;Dist. Empírica&amp;quot;, bty= &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/bootstrap/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow = c(1,1))&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;comentario&#34;&gt;Comentário&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Note que se &lt;span class=&#34;math inline&#34;&gt;\(F_n\)&lt;/span&gt; não for uma boa aproximação de &lt;span class=&#34;math inline&#34;&gt;\(F_X\)&lt;/span&gt; então a distribuição das réplicas não se aproxima de &lt;span class=&#34;math inline&#34;&gt;\(F_X\)&lt;/span&gt;. A amostra &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{x}\)&lt;/span&gt; acima é na verdade uma amostra de &lt;span class=&#34;math inline&#34;&gt;\(X \sim Poisson(2)\)&lt;/span&gt;. Reamostragem de x um grande número de réplicas produz uma boa estimativa de &lt;span class=&#34;math inline&#34;&gt;\(F_n\)&lt;/span&gt;, mas não uma boa estimativa de &lt;span class=&#34;math inline&#34;&gt;\(F_X\)&lt;/span&gt;, porque independentemente do número de réplicas, as amostras de bootstrap nunca incluirão 0.”, traduzido de &lt;span class=&#34;citation&#34;&gt;Rizzo (2007)&lt;/span&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Segundo &lt;span class=&#34;citation&#34;&gt;Rizzo (2007)&lt;/span&gt;, a função de distribuição empírica &lt;span class=&#34;math inline&#34;&gt;\(F_n\)&lt;/span&gt; coincide com &lt;span class=&#34;math inline&#34;&gt;\(F_{X^*}\)&lt;/span&gt;. Logo, há duas grandes suposições no método &lt;strong&gt;bootstrap&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A função de distribuição empírica &lt;span class=&#34;math inline&#34;&gt;\(F_n\)&lt;/span&gt; é uma boa aproximação para &lt;span class=&#34;math inline&#34;&gt;\(F_X\)&lt;/span&gt;, então a distribuição de &lt;span class=&#34;math inline&#34;&gt;\(\hat{\theta}^*\)&lt;/span&gt; é similar a distribuição de &lt;span class=&#34;math inline&#34;&gt;\(\hat\theta\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A distribuição empírica das réplicas bootstrap é uma boa aproximação para &lt;span class=&#34;math inline&#34;&gt;\(F_n\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Portanto, a tarefa de fazer inferências sobre &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; se reduz a aprender sobre a distribuição bootstrap de &lt;span class=&#34;math inline&#34;&gt;\(\hat\theta^*\)&lt;/span&gt;. Logo, para cada amostra &lt;strong&gt;bootstrap&lt;/strong&gt; indexada por &lt;span class=&#34;math inline&#34;&gt;\(b = 1, \dots, B\)&lt;/span&gt;, calcula-se &lt;span class=&#34;math inline&#34;&gt;\(\hat\theta^{*(b)}\)&lt;/span&gt; e a estimativa bootstrap de &lt;span class=&#34;math inline&#34;&gt;\(F_{\hat\theta}(.)\)&lt;/span&gt; é a distribuição empírica das réplicas &lt;span class=&#34;math inline&#34;&gt;\(\hat\theta^{(1)}, \dots , \hat\theta^{(B)}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;conclusao&#34;&gt;Conclusão&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A distribuição da população finita representada pela amostra pode ser
+considerada uma pseudo-população com características semelhantes às da verdadeira população.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Através da geração repetida de amostras aleatórias desta pseudo-população
+(reamostragem), a distribuição amostral de uma estatística pode ser estimada. As propriedades de um estimador, como viés ou erro padrão, podem ser estimadas
+reamostragem.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As estimativas de bootstrap de uma distribuição de amostragem são análogas à ideia de estimativa de densidade. Construímos um histograma de uma amostra para obter uma estimativa da forma da função de densidade.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The bootstrap is rarely the star of statistics, but it is the best supporting actor”, Bradley Efron.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;nota&#34;&gt;Nota&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(F_n\)&lt;/span&gt; é uma distribuição discreta com pesos iguais para cada ponto amostral. &lt;span class=&#34;math inline&#34;&gt;\(F_n\)&lt;/span&gt; é definida como uma proporção amostral.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[F_n(t) = \sum \limits_{i=1}^n \frac{\#\{x_i \le t \}}{n} I_{(x_i \le t)}\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A função de distribuição empírica &lt;span class=&#34;math inline&#34;&gt;\(F_n(x)\)&lt;/span&gt; é um estimador de &lt;span class=&#34;math inline&#34;&gt;\(F_X\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Vimos no exemplo 7.1 &lt;span class=&#34;citation&#34;&gt;Rizzo (2007)&lt;/span&gt; que reamostrar de &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{x}\)&lt;/span&gt; é equivalente a gerar valores da
+distribuição &lt;span class=&#34;math inline&#34;&gt;\(F_n(x)\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/post/bootstrap/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;referencias&#34;&gt;Referências&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-Diaconis:1983&#34;&gt;
+&lt;p&gt;Diaconis, Persi, and Bradley Efron. 1983. “Computer-Intensive Methods in Statistics.” &lt;em&gt;Scientific American&lt;/em&gt; 248 (5): 116–31.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Efron:1979&#34;&gt;
+&lt;p&gt;Efron, B. 1979. “Bootstrap Methods: Another Look at the Jackknife.” &lt;em&gt;The Annals of Statistics&lt;/em&gt;, 1–26.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Oxford:2014&#34;&gt;
+&lt;p&gt;Oxford, Dictionary. 2014. “Oxford Dictionaries.” &lt;em&gt;Language Matters&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Rizzo:2007&#34;&gt;
+&lt;p&gt;Rizzo, Maria L. 2007. &lt;em&gt;Statistical Computing with R&lt;/em&gt;. Chapman; Hall/CRC.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Scholz:2007&#34;&gt;
+&lt;p&gt;Scholz, F. 2007. “The Bootstrap Small Sample Properties.” &lt;em&gt;Boeing Comput Serv Res Technol Tech Rep&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Como fazer o Jackknife no R?</title>
@@ -170,14 +290,15 @@ print(estjack)&lt;/code&gt;&lt;/pre&gt;
       <description>
 
 
+&lt;div style=&#34;text-align: justify&#34;&gt;
 &lt;p&gt;Imagine o seguinte cenário: você é um professor que utiliza vários softwares em suas aulas e, como professor, sua missão é a de ensinar a cada um de seus alunos como usar todos eles.
 Além disso, ainda há outro problema! Os softwares disponíveis no mercado são de alto custo e, portanto, a maioria dos alunos dificilmente terá acesso à essas ferramentas após concluírem o curso.&lt;/p&gt;
 &lt;p&gt;A questão é: Como lidar com tais softwares dada as dificuldades financeiras dos estudantes ao deixarem a universidade? De quais softwares comprar as permissões e licenças?&lt;/p&gt;
 &lt;p&gt;Bom, essa era a motivação de &lt;span class=&#34;citation&#34;&gt;Ihaka and Gentleman (1996)&lt;/span&gt;. Dois professores da Universidade de Auckland (Nova Zelândia) que se depararam com esse cenário incômodo. Coincidência ou não, em 1993 Ross teve acesso a um livro chamado “&lt;em&gt;New S language&lt;/em&gt;”, que lhe trouxe uma ideia inusitada. Tomando como base as ideias da linguagem S, os dois professores produziram sua própria linguagem de computador para dar aulas sobre estatística, e deram à ela o nome de R (que faz menção ao nome de seus criadores e também faz referencia à linguagem S que originou o R).&lt;/p&gt;
 &lt;p&gt;De acordo com &lt;span class=&#34;citation&#34;&gt;Fox (2009)&lt;/span&gt;, no início, o R era apenas distribuído entre os alunos que, após as aulas levavam cópias do recém criado software para casa. Contudo, essas cópias foram sendo repassadas entre os alunos e dos alunos para a comunidade, aumentando o interesse de diversos usuários sobre a linguagem. Até que, em julho de 1995, Ross e Robert começaram a disseminar o software R publicamente, já que uma nova linguagem de programação surgira, disponibilizando-a no servidor da universidade. O sucesso do R foi tanto, que após 2 anos a linguagem já tinha visibilidade mundial e despertou o interesse de muitos desenvolvedores, inclusive John Chambers, um dos idealizadores e criadores da linguagem S.&lt;/p&gt;
 &lt;p&gt;Nos últimos anos o R se tornou o queridinho de muitas empresas, especialmente das gigantes do ramo da tecnologia, como Facebook e Google, atraídas pelas vantagens do R sobre outros softwares, como custo, rápidez e código aberto, além das excelentes funcionalidades para análises estatísticas. Curiosamente hoje, a linguagem está no top 3 das linguagens mais utilizadas por cientistas de dados e, certamente, é uma das mais utilizadas entre os estudantes da estatística, engenharia, economia, epidemiologia, medicina e àreas afins.&lt;/p&gt;
-&lt;div id=&#34;referencias&#34; class=&#34;section level2 unnumbered&#34;&gt;
-&lt;h2&gt;Referências&lt;/h2&gt;
+&lt;h2 id=&#34;referencias&#34;&gt;Referências&lt;/h2&gt;
+&lt;/div&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-Fox:2009&#34;&gt;
 &lt;p&gt;Fox, John. 2009. “Aspects of the Social Organization and Trajectory of the R Project.” &lt;em&gt;The R Journal&lt;/em&gt; 1 (2): 5–13.&lt;/p&gt;
@@ -186,12 +307,11 @@ Além disso, ainda há outro problema! Os softwares disponíveis no mercado são
 &lt;p&gt;Ihaka, Ross, and Robert Gentleman. 1996. “R: A Language for Data Analysis and Graphics.” &lt;em&gt;Journal of Computational and Graphical Statistics&lt;/em&gt; 5 (3): 299–314.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title></title>
+      <title>Estatística para Engenheiros</title>
       <link>/courses/aular/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 -0300</pubDate>
       
@@ -207,17 +327,19 @@ Além disso, ainda há outro problema! Os softwares disponíveis no mercado são
 &lt;div class=&#34;tab-content&#34; id=&#34;nav-tabContent&#34;&gt;
   &lt;div class=&#34;tab-pane fade show active&#34; id=&#34;nav-home&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-home-tab&#34;&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&#34;Aula1/aula1.pdf&#34;&gt;&lt;img src=&#34;Aula1/cover.png&#34; width=&#34;800&#34; height=&#34;600&#34; title=&#34;Slides&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;i class=&#34;fa fa-download&#34;&gt;&lt;/i&gt;&lt;a href=&#34;Aula1/aula1.pdf&#34; target=&#34;_blank&#34;&gt;Slides&lt;/a&gt;&lt;/button&gt;
-&lt;/br&gt;
+&amp;nbsp;
 &lt;button type=&#34;button class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula1/dados.xlsx&#34; target=&#34;_blank&#34;&gt;Dados&lt;/a&gt;&lt;/button&gt;
 &lt;button type=&#34;button class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula1/dados_titanic.csv&#34; target=&#34;_blank&#34;&gt;Dados Titanic&lt;/a&gt;&lt;/button&gt;
 &lt;button type=&#34;button class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula1/script.R&#34; target=&#34;_blank&#34;&gt;Código R&lt;/a&gt;&lt;/button&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/div&gt;
-  &lt;div class=&#34;tab-pane fade&#34; id=&#34;nav-profile&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-profile-tab&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;i class=&#34;fa fa-download&#34;&gt;&lt;/i&gt; &lt;a href=&#34;Aula2/aula2.pdf&#34; target=&#34;_blank&#34;&gt;Slides&lt;/a&gt;&lt;/button&gt;
-&lt;/br&gt;
+  &lt;div class=&#34;tab-pane fade&#34; id=&#34;nav-profile&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-profile-tab&#34;&gt;
+  &lt;a href=&#34;Aula2/aula2.pdf&#34;&gt;&lt;img src=&#34;Aula2/cover.png&#34; width=&#34;800&#34; height=&#34;600&#34; title=&#34;Slides&#34;&gt;&lt;/a&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;i class=&#34;fa fa-download&#34;&gt;&lt;/i&gt; &lt;a href=&#34;Aula2/aula2.pdf&#34; target=&#34;_blank&#34;&gt;Slides&lt;/a&gt;&lt;/button&gt;
+&amp;nbsp;
 &lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula2/beerSP.csv&#34; target=&#34;_blank&#34;&gt;beerSP&lt;/a&gt;&lt;/button&gt;
 &lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula2/BlackFriday.csv&#34; target=&#34;_blank&#34;&gt;Black Friday&lt;/a&gt;&lt;/button&gt;
 &lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt; &lt;a href=&#34;Aula2/dados_titanic.csv&#34; target=&#34;_blank&#34;&gt;Dados Titanic&lt;/a&gt;&lt;/button&gt;
@@ -229,7 +351,7 @@ Além disso, ainda há outro problema! Os softwares disponíveis no mercado são
     </item>
     
     <item>
-      <title></title>
+      <title>Planejamento de Experimentos</title>
       <link>/courses/doe/</link>
       <pubDate>Sat, 23 Mar 2019 00:00:00 -0300</pubDate>
       
@@ -245,39 +367,34 @@ Além disso, ainda há outro problema! Os softwares disponíveis no mercado são
   &lt;/div&gt;
 &lt;/nav&gt;
 &lt;div class=&#34;tab-content&#34; id=&#34;nav-tabContent&#34;&gt;
-  &lt;div class=&#34;tab-pane fade show active&#34; id=&#34;nav-home&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-home-tab&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;curso_DOE_EACHUSP/curso_doe_parte1_1.html&#34; target=&#34;_blank&#34;&gt;curso_doe_parte1_1.html&lt;/a&gt;
-&lt;/div&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;div class=&#34;tab-pane fade show active&#34; id=&#34;nav-home&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-home-tab&#34;&gt;
+  &amp;nbsp;
+&lt;iframe seamless src=&#34;curso_DOE_EACHUSP/curso_doe_parte1_1.html&#34; width=&#34;100%&#34; height=&#34;300&#34;&gt;&lt;/iframe&gt;&lt;br /&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt;&lt;a href=&#34;curso_DOE_EACHUSP/curso_doe_parte1_1.html&#34; target=&#34;_blank&#34;&gt;curso_doe_parte1_1.html&lt;/a&gt;&lt;/button&gt;
+&lt;/br&gt;
+&lt;/div&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;tab-pane fade&#34; id=&#34;nav-profile1&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-profile-tab&#34;&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;curso_DOE_EACHUSP/curso_doe_parte2_1.html&#34; target=&#34;_blank&#34;&gt;curso_doe_parte2_1.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;curso_DOE_EACHUSP/curso_doe_parte2_2.html&#34; target=&#34;_blank&#34;&gt;curso_doe_parte2_2.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;curso_DOE_EACHUSP/curso_doe_parte2_3.html&#34; target=&#34;_blank&#34;&gt;curso_doe_parte2_3.html&lt;/a&gt;
-&lt;/div&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;div class=&#34;tab-pane fade&#34; id=&#34;nav-profile2&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-profile-tab&#34;&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;curso_DOE_EACHUSP/curso_doe_parte3_1.html&#34; target=&#34;_blank&#34;&gt;curso_doe_parte3_1.html&lt;/a&gt;
-&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;div class=&#34;tab-pane fade&#34; id=&#34;nav-profile3&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-profile-tab&#34;&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;curso_DOE_EACHUSP/notas_de_aula_DOE_EACHUSP.pdf&#34; target=&#34;_blank&#34;&gt;notas_de_aula_DOE_EACHUSP.pdf&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;div class=&#34;tab-pane fade&#34; id=&#34;nav-profile1&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-profile-tab&#34;&gt;
+  &amp;nbsp;
+&lt;iframe seamless src=&#34;curso_DOE_EACHUSP/curso_doe_parte2_1.html&#34; width=&#34;100%&#34; height=&#34;300&#34;&gt;&lt;/iframe&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt;&lt;a href=&#34;curso_DOE_EACHUSP/curso_doe_parte2_1.html&#34; target=&#34;_blank&#34;&gt;curso_doe_parte2_1.html&lt;/a&gt;&lt;/button&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt;&lt;a href=&#34;curso_DOE_EACHUSP/curso_doe_parte2_2.html&#34; target=&#34;_blank&#34;&gt;curso_doe_parte2_2.html&lt;/a&gt;&lt;/button&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt;&lt;a href=&#34;curso_DOE_EACHUSP/curso_doe_parte2_3.html&#34; target=&#34;_blank&#34;&gt;curso_doe_parte2_3.html&lt;/a&gt;&lt;/button&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;tab-pane fade&#34; id=&#34;nav-profile2&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-profile-tab&#34;&gt;
+  &lt;iframe seamless src=&#34;curso_DOE_EACHUSP/curso_doe_parte3_1.html&#34; width=&#34;100%&#34; height=&#34;300&#34;&gt;&lt;/iframe&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt;&lt;a href=&#34;curso_DOE_EACHUSP/curso_doe_parte3_1.html&#34; target=&#34;_blank&#34;&gt;curso_doe_parte3_1.html&lt;/a&gt;&lt;/button&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;tab-pane fade&#34; id=&#34;nav-profile3&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;nav-profile-tab&#34;&gt;
+  &amp;nbsp;
+  &lt;a href=&#34;curso_DOE_EACHUSP/notas_de_aula_DOE_EACHUSP.pdf&#34;&gt;&lt;img src=&#34;curso_DOE_EACHUSP/cover.png&#34; width=&#34;800&#34; height=&#34;600&#34; title=&#34;Slides&#34;&gt;&lt;/a&gt;
+&lt;button type=&#34;button  class=&#34;btn btn-primary&#34;&gt;&lt;a href=&#34;curso_DOE_EACHUSP/notas_de_aula_DOE_EACHUSP.pdf&#34; target=&#34;_blank&#34;&gt;Slides&lt;/a&gt;&lt;/button&gt;
+&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     

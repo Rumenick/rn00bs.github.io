@@ -27,9 +27,8 @@
   
     
   
-  <meta name="description" content="Métodos Bootstrap O método bootstrap de reamostragem foi introduzido pelo estatístico estadunidense Bradley Efron em 1979 e desenvolvido anos depois.
- Bootstrap methods: another look at the jackknife, Efron (1979).  O termo Bootstrap Em inglês, Bootstrap é a alça da bota, ou seja, é algo que precisa ser alavancado por esforço próprio.
-“Boot” é uma forma abreviada da palavra “bootstrap” e refere-se aos comandos iniciais necessários para carregar o restante do sistema operacional do computador.">
+  <meta name="description" content="Métodos Bootstrap O Bootstrap foi uma das primeiras técnicas estatísticas intensivas de reamostragem para computar a variância de um conjunto de dados estatísticos, construir intervalos de confiança e realizar testes de hipóteses sobre parâmetros de interesse, esse método foi introduzido pelo estatístico estadunidense Bradley Efron em 1979. Efron seguiu o espírito de Tuckey para nomear a técnica (veja o post sobre jackknife).
+ Bootstrap methods: another look at the jackknife, Efron (1979).">
 
   
   <link rel="alternate" hreflang="pt-br" href="/post/bootstrap/">
@@ -120,14 +119,13 @@
   <meta property="og:site_name" content="Rn00bs">
   <meta property="og:url" content="/post/bootstrap/">
   <meta property="og:title" content="Introdução ao Bootstrap | Rn00bs">
-  <meta property="og:description" content="Métodos Bootstrap O método bootstrap de reamostragem foi introduzido pelo estatístico estadunidense Bradley Efron em 1979 e desenvolvido anos depois.
- Bootstrap methods: another look at the jackknife, Efron (1979).  O termo Bootstrap Em inglês, Bootstrap é a alça da bota, ou seja, é algo que precisa ser alavancado por esforço próprio.
-“Boot” é uma forma abreviada da palavra “bootstrap” e refere-se aos comandos iniciais necessários para carregar o restante do sistema operacional do computador."><meta property="og:image" content="/post/bootstrap/featured.jpg">
+  <meta property="og:description" content="Métodos Bootstrap O Bootstrap foi uma das primeiras técnicas estatísticas intensivas de reamostragem para computar a variância de um conjunto de dados estatísticos, construir intervalos de confiança e realizar testes de hipóteses sobre parâmetros de interesse, esse método foi introduzido pelo estatístico estadunidense Bradley Efron em 1979. Efron seguiu o espírito de Tuckey para nomear a técnica (veja o post sobre jackknife).
+ Bootstrap methods: another look at the jackknife, Efron (1979)."><meta property="og:image" content="/post/bootstrap/featured.jpg">
   <meta property="og:locale" content="pt-br">
   
-  <meta property="article:published_time" content="2019-05-12T09:41:33&#43;00:00">
+  <meta property="article:published_time" content="2019-05-15T16:23:27&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-05-12T09:41:33&#43;00:00">
+  <meta property="article:modified_time" content="2019-05-15T16:23:27&#43;00:00">
   
 
   
@@ -402,8 +400,8 @@
 
 
 
-<meta content="2019-05-12 09:41:33 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-05-12 09:41:33 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-05-15 16:23:27 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-05-15 16:23:27 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -416,7 +414,7 @@
 
 
 
-  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/silvio-cabral/">Silvio Cabral</a></span>
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/renato/">Renato Valladares Panaro</a></span>
 
   </div>
   
@@ -428,7 +426,7 @@
     
       
     
-    <time>May 12, 2019</time>
+    <time>May 15, 2019</time>
   </span>
   
 
@@ -444,7 +442,7 @@
   <span class="middot-divider"></span>
   <span class="article-categories">
     <i class="fas fa-folder"></i>
-    <a href="">Estatística Computacional</a></span>
+    <a href="/categories/estatcomp/">EstatComp</a></span>
   
 
   
@@ -571,8 +569,8 @@
 
 
 
-<meta content="2019-05-12 09:41:33 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-05-12 09:41:33 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-05-15 16:23:27 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-05-15 16:23:27 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -585,7 +583,7 @@
 
 
 
-  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/silvio-cabral/">Silvio Cabral</a></span>
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/renato/">Renato Valladares Panaro</a></span>
 
   </div>
   
@@ -597,7 +595,7 @@
     
       
     
-    <time>May 12, 2019</time>
+    <time>May 15, 2019</time>
   </span>
   
 
@@ -613,7 +611,7 @@
   <span class="middot-divider"></span>
   <span class="article-categories">
     <i class="fas fa-folder"></i>
-    <a href="">Estatística Computacional</a></span>
+    <a href="/categories/estatcomp/">EstatComp</a></span>
   
 
   
@@ -727,246 +725,112 @@
       
 
 
-<div id="metodos-bootstrap" class="section level1">
-<h1>Métodos Bootstrap</h1>
-<p>O método bootstrap de reamostragem foi introduzido pelo estatístico estadunidense Bradley Efron em 1979 e desenvolvido anos depois.</p>
+<div style="text-align: justify">
+<h2 id="metodos-bootstrap">Métodos Bootstrap</h2>
+<p>O Bootstrap foi uma das primeiras técnicas estatísticas intensivas de reamostragem para computar a variância de um conjunto de dados estatísticos, construir intervalos de confiança e realizar testes de hipóteses sobre parâmetros de interesse, esse método foi introduzido pelo estatístico estadunidense Bradley Efron em 1979. Efron seguiu o espírito de Tuckey para nomear a técnica (veja o <a href="/post/jackknife/">post</a> sobre jackknife).</p>
 <ul>
 <li><em>Bootstrap methods: another look at the jackknife</em>, <span class="citation">Efron (1979)</span>.</li>
 </ul>
-
-<div id="o-termo-bootstrap" class="section level2">
-<h2>O termo Bootstrap</h2>
-<p>Em inglês, Bootstrap é a alça da bota, ou seja, é algo que precisa ser alavancado por esforço próprio.</p>
-<p>“Boot” é uma forma abreviada da palavra “bootstrap” e refere-se aos comandos iniciais necessários para carregar o restante do sistema operacional do computador. Assim, o sistema é “inicializado” ou “puxado por seus próprios bootstraps (alças)”.</p>
-<p>Em estatística, os métodos de bootstrap são uma classe de métodos que estimam a distribuição de uma população por reamostragem. Segundo <span class="citation">Manly (2006)</span>, o termo escolhido por Efron faz analogia a alguém se retirando da lama com seus bootstraps.</p>
-<p>O bootstrap foi uma das primeiras técnicas estatísticas intensivas para computar a variância de um conjunto de dados estatísticos, construir intervalos de confiança e realizar testes de hipóteses sobre parâmetros de interesse.</p>
-<p> </p>
-<blockquote>
-<p>“The bootstrap is rarely the star of statistics, but it is the best supporting actor”, Bradley Efron.</p>
-</blockquote>
-</div>
-<div id="a-ideia-do-metodo" class="section level2">
-<h2>A ideia do método</h2>
+<h2 id="o-termo-bootstrap">O termo Bootstrap</h2>
+<p>Em inglês, bootstrap é sinônimo de alça da bota, logo, remete a algo que precisa ser alavancado por esforço próprio. A forma abreviada “boot” é muito popular quando usada para referir-se aos comandos iniciais necessários para carregar o sistema operacional do computador, <span class="citation">Oxford (2014)</span>. Porém, segundo <span class="citation">Scholz (2007)</span>, a motivação foi fazer uma analogia ao ato de puxar a si mesmo e seu cavalo para fora de um atoleiro, como na ficção <strong>As Aventuras do Barão Munchausen</strong>. O detalhe é que na ficção o Barão usa como recurso o seu próprio rabo de cavalo e não a alça da bota, no entanto, essa versão para a motivação de Efron ganhou força após tradução do artigo de <span class="citation">Diaconis and Efron (1983)</span> para alemão em que o uso da expressão “die M¨unchhausen Methode” é feito pelos autores.</p>
+<p><img src="gallery/baron.jpg">
+Figura: Capa do Livro <strong>Aventuras do Barão Munchausen</strong>.</img></p>
+<h2 id="a-ideia-do-metodo">A ideia do método</h2>
+<p>Em estatística, os métodos de bootstrap são uma classe de métodos que estimam a distribuição de uma população por reamostragem. A amostra observada é tratada como uma população e amostras aleatórias com reposição são geradas (reamostradas) a partir dela. Com o bootstrap ou bootstrapping é possível estudar características da população a partir dessa pseudo-população e extrair inferências.</p>
+<p><img src="gallery/bootstrapping.png">
+Figura: Representação do Bootstrap com B=3 e n=5.</img></p>
+<p>Na Figura,</p>
 <ul>
-<li><p>A amostra observada é tratada como uma população finita e amostras aleatórias com reposição são geradas (reamostradas) a partir dela.</p></li>
-<li><p>Com o bootstrap ou bootstrapping é possível estudar características da população a partir da pseudo-população e extrair inferências.</p></li>
+<li><p>A amostra Bootstrap é do mesmo tamanho (n = 5) da amostra original.</p></li>
+<li><p>Cada amostra Boostrap nada mais é do que uma reamostra, ou seja, uma amostragem simples com reposição feita a partir da amostra original.</p></li>
+<li><p>O fato de ser com reposição significa que o valor é reposto ao conjunto de possíveis valores de retirada.</p></li>
+<li><p>B é o número arbitrário de réplicas (número de reamostras) bootstrap.</p></li>
 </ul>
-<p><img src="bootstrapping.png" /></p>
-</div>
-<div id="distribuicao-da-amostra-bootstrap" class="section level2">
-<h2>Distribuição da Amostra Bootstrap</h2>
-<p>Suponha que <span class="math inline">\(\mathbf{x} = (x_1, \dots, x_n)^T \in \mathbb{R}^n\)</span> é uma a.a. observada de uma distribuição <span class="math inline">\(F_X\)</span>. Se <span class="math inline">\(X^*\)</span> é selecionado aleatoriamente de <span class="math inline">\(\mathbf{x}\)</span>, então,</p>
-<p><span class="math display">\[P(X^* = x_i) = \frac{1}{n}, ~~~i=1,\dots,n.\]</span></p>
-<p>Logo, gera-se uma a.a. <span class="math inline">\(X^*_1,X^*_2, \dots, X^*_n\)</span> i.i.d com distribuição uniforme no conjunto <span class="math inline">\(\{{x_1, \dots, x_n}\}.\)</span></p>
-</div>
-<div id="distribuicao-empirica-f_n" class="section level2">
-<h2>Distribuição Empírica <span class="math inline">\(F_n\)</span></h2>
-<p><span class="math inline">\(F_n\)</span> é uma distribuição discreta com pesos iguais para cada ponto amostral. <span class="math inline">\(F_n\)</span> é definida como uma proporção amostral.</p>
-<p><span class="math display">\[F_n(t) = \sum \limits_{i=1}^n \frac{\#\{x_i \le t \}}{n} I_{(x_i \le t)}\]</span></p>
-<ul>
-<li><p>A função de distribuição empírica <span class="math inline">\(F_n(x)\)</span> é um estimador de <span class="math inline">\(F_X\)</span> e pode ser mostrado que <span class="math inline">\(F_n\)</span> é uma estatística suficiente para <span class="math inline">\(F_X\)</span>;</p></li>
-<li><p>Reamostrar de <span class="math inline">\(\mathbf{x}\)</span> é equivalente a gerar da
-distribuição <span class="math inline">\(F_n(x)\)</span>.</p></li>
-</ul>
-</div>
-<div id="exemplo-de-f_n" class="section level2">
-<h2>Exemplo de <span class="math inline">\(F_n\)</span></h2>
+<h2 id="distribuicao-da-amostra-bootstrap-f_x-e-distribuicao-empirica-f_n">Distribuição da Amostra Bootstrap <span class="math inline">\(F_{X^*}\)</span> e Distribuição Empírica <span class="math inline">\(F_n\)</span></h2>
+<p>Suponha que <span class="math inline">\(\mathbf{x} = (x_1, \dots, x_n)\)</span> é uma amostra aleatória (a.a.) observada de uma distribuição <span class="math inline">\(F_X\)</span>. Se <span class="math inline">\(X^*\)</span> representa a seleção de uma observação aleatoriamente de <span class="math inline">\(\mathbf{x}\)</span>, então,</p>
+<p><span class="math display">\[p = P(X^* = x_i) = \frac{1}{n}, ~~~i=1,\dots,n.\]</span></p>
+<p>Logo, gera-se uma amostra <span class="math inline">\(X^*_1,X^*_2, \dots, X^*_n\)</span> independente e identicamente distribuída (i.i.d.) com distribuição uniforme discreta no conjunto <span class="math inline">\(\{{x_1, \dots, x_n}\}.\)</span></p>
+<p><strong>Exemplo 7.1 - <span class="citation">Rizzo (2007)</span>:</strong> Suponha <span class="math inline">\(\mathbf{x} = \{2,2,1,1,5,4,4,3,1,2\}\)</span> uma a.a. observada de tamanho 10. Note que, dada amostra aleatória <span class="math inline">\(\mathbf{x}\)</span>, há 5 valores possíveis para formar uma reamostra <span class="math inline">\(X^*\)</span> de <span class="math inline">\(\mathbf{x}\)</span> com probabilidades:</p>
+<p><span class="math display">\[P(X = k) = \begin{cases}
+0,3; \text{ se } k = 1 \\
+0,3; \text{ se } k = 2 \\
+0,1; \text{ se } k = 3 \\
+0,2; \text{ se } k = 4 \\
+0,1; \text{ se } k = 5 \\
+\end{cases}\]</span></p>
+<p>Note que cada elemento <span class="math inline">\(x_i\)</span> pertencente ao conjunto <span class="math inline">\(\mathbb{x}=\{x_1, x_2, x_3, \dots, x_{10}\} =\{2,2,1,1,5,4,4,3,1,2\}\)</span> tem probabilidade de retirada <span class="math inline">\(p = \frac{1}{10}\)</span>, logo, as probabilidades são somadas a medida que os valores se repetem nesse conjunto.</p>
+<p>Visualização no R:</p>
+<pre class="r"><code>x &lt;- c(2,2,1,1,5,4,4,3,1,2)
+n &lt;- length(x)
+barplot(table(x)/n, bty = &quot;n&quot;, ylab = expression(P[X](k)),
+        xlab = expression(x[i]), col = &quot;darkblue&quot;)</code></pre>
 <p><img src="/post/bootstrap/index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-</div>
-<div id="exemplo-de-f_n-1" class="section level2">
-<h2>Exemplo de <span class="math inline">\(F_n\)</span></h2>
+<p>Perceba que a distribuição acumulada <span class="math inline">\(F_{X*}\)</span> da amostra bootstrap coincide com a distribuição empírica que pode ser usada como aproximação de <span class="math inline">\(F_X\)</span>,</p>
+<p><span class="math display">\[F_n(k) = F_{X^*}(k) = \begin{cases}
+0; \text{ se } k &lt; 1\\
+0,3; \text{ se } 1 \le k &lt; 2\\
+0,6; \text{ se } 2 \le k &lt; 3 \\
+0,7; \text{ se } 3 \le k &lt; 4 \\
+0,9; \text{ se } 4 \le k &lt; 5\\
+1; \text{ se } k \ge 5.
+\end{cases}\]</span></p>
+<p>No R é possível visualizar que as duas distribuições coincidem, logo, reamostrar de <span class="math inline">\(\mathbf{x}\)</span> equivale a gerar valores da distribuição <span class="math inline">\(F_n(x)\)</span>.</p>
+<pre class="r"><code>par(mfrow = c(1,2))
+barplot(c(c(&#39;0&#39;=0), cumsum(table(x)/n)), bty = &quot;n&quot;, 
+        main = &quot;Dist. Acumulada&quot;, ylab = expression(F[X](k)),
+        xlab = expression(x[i]), col = &quot;darkblue&quot;)
+
+plot(ecdf(x), main = &quot;Dist. Empírica&quot;, bty= &quot;n&quot;)</code></pre>
 <p><img src="/post/bootstrap/index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-</div>
-<div id="suposicoes" class="section level2">
-<h2>Suposições</h2>
-<p>A função de distribuição empírica <span class="math inline">\(F_n\)</span> coincide com <span class="math inline">\(F_{X^*}\)</span>. Logo, há duas grandes suposições no método <strong>bootstrap</strong>.</p>
+<pre class="r"><code>par(mfrow = c(1,1))</code></pre>
+<h2 id="comentario">Comentário</h2>
+<blockquote>
+<p>“Note que se <span class="math inline">\(F_n\)</span> não for uma boa aproximação de <span class="math inline">\(F_X\)</span> então a distribuição das réplicas não se aproxima de <span class="math inline">\(F_X\)</span>. A amostra <span class="math inline">\(\mathbf{x}\)</span> acima é na verdade uma amostra de <span class="math inline">\(X \sim Poisson(2)\)</span>. Reamostragem de x um grande número de réplicas produz uma boa estimativa de <span class="math inline">\(F_n\)</span>, mas não uma boa estimativa de <span class="math inline">\(F_X\)</span>, porque independentemente do número de réplicas, as amostras de bootstrap nunca incluirão 0.”, traduzido de <span class="citation">Rizzo (2007)</span>.</p>
+</blockquote>
+<p>Segundo <span class="citation">Rizzo (2007)</span>, a função de distribuição empírica <span class="math inline">\(F_n\)</span> coincide com <span class="math inline">\(F_{X^*}\)</span>. Logo, há duas grandes suposições no método <strong>bootstrap</strong>.</p>
 <ul>
 <li><p>A função de distribuição empírica <span class="math inline">\(F_n\)</span> é uma boa aproximação para <span class="math inline">\(F_X\)</span>, então a distribuição de <span class="math inline">\(\hat{\theta}^*\)</span> é similar a distribuição de <span class="math inline">\(\hat\theta\)</span>.</p></li>
 <li><p>A distribuição empírica das réplicas bootstrap é uma boa aproximação para <span class="math inline">\(F_n\)</span>.</p></li>
 </ul>
-<p>Portanto, a tarefa de fazer inferências sobre <span class="math inline">\(\theta\)</span> se reduz a aprender sobre a distribuição bootstrap de <span class="math inline">\(\hat\theta^*\)</span>.</p>
-<p>Na pratica usa-se o método de simulação Monte
-Carlo para aproximar a distribuição das amostras bootstrap.</p>
-</div>
-<div id="algoritmo" class="section level2">
-<h2>Algoritmo</h2>
-<p>Suponha <span class="math inline">\(\hat{\theta}\)</span> o estimador para o parâmetro de interesse <span class="math inline">\(\theta\)</span>.</p>
+<p>Portanto, a tarefa de fazer inferências sobre <span class="math inline">\(\theta\)</span> se reduz a aprender sobre a distribuição bootstrap de <span class="math inline">\(\hat\theta^*\)</span>. Logo, para cada amostra <strong>bootstrap</strong> indexada por <span class="math inline">\(b = 1, \dots, B\)</span>, calcula-se <span class="math inline">\(\hat\theta^{*(b)}\)</span> e a estimativa bootstrap de <span class="math inline">\(F_{\hat\theta}(.)\)</span> é a distribuição empírica das réplicas <span class="math inline">\(\hat\theta^{(1)}, \dots , \hat\theta^{(B)}\)</span>.</p>
+<h2 id="conclusao">Conclusão</h2>
 <ul>
-<li>Para cada amostra <strong>bootstrap</strong> indexada por <span class="math inline">\(b = 1, \dots, B\)</span>.
-<ul>
-<li>Gere uma amostra <span class="math inline">\(x^{*}(b) = x^{*}_1,\dots, x^{*}_n\)</span> a partir de <span class="math inline">\(x_1, x_2, \dots, x_n\)</span></li>
-<li>Calcule <span class="math inline">\(\hat\theta^{(b)}\)</span> com a b-ésima amostra bootstrap.</li>
-</ul></li>
-<li>A estimativa bootstrap de <span class="math inline">\(F_{\hat\theta}(.)\)</span> é a distribuição empírica das réplicas <span class="math inline">\(\hat\theta^{(1)}, \dots , \hat\theta^{(B)}\)</span>.</li>
-</ul>
-</div>
-<div id="exemplo-1" class="section level2">
-<h2>Exemplo 1</h2>
-<p>Exemplo 7.1, <span class="citation">Rizzo (2007)</span>. Suponha <span class="math inline">\(\mathbf{x} = \{2,2,1,1,5,4,4,3,1,2\}\)</span> uma a.a. observada de tamanho 10.</p>
-
-</div>
-<div id="exemplo-1-distribuicao-empirica-f_n" class="section level2">
-<h2>Exemplo 1 | Distribuição Empírica <span class="math inline">\(F_n\)</span></h2>
-<p><img src="/post/bootstrap/index_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
-</div>
-<div id="exemplo-1-distribuicao-booststrap-f_x" class="section level2">
-<h2>Exemplo 1 | Distribuição Booststrap <span class="math inline">\(F_X^*\)</span></h2>
-<p>Dado <span class="math inline">\(\mathbf{x} = \{2,2,1,1,5,4,4,3,1,2\}\)</span>, note que há 5 valores possíveis para formar uma reamostra <span class="math inline">\(X^*\)</span> de <span class="math inline">\(\mathbf{x}\)</span>.</p>
-<p><img src="/post/bootstrap/index_files/figure-html/unnamed-chunk-4-1.png" width="384" /></p>
-</div>
-<div id="exemplo-1-1" class="section level2">
-<h2>Exemplo 1</h2>
-<p><span class="math display">\[F_n(x) = F_{X^*}(x) = \begin{cases}
-0, \text{ se } x &lt; 1\\
-0.3, \text{ se } 1 \le x &lt; 2\\
-0.6, \text{ se } 2 \le x &lt; 3 \\
-0.7, \text{ se } 3 \le x &lt; 4 \\
-0.9, \text{ se } 4 \le x &lt; 5\\
-1, \text{ se } x \ge 5.
-\end{cases}\]</span></p>
-</div>
-<div id="exemplo-1-comentario" class="section level2">
-<h2>Exemplo 1 | Comentário</h2>
-<blockquote>
-<p>“Note que se <span class="math inline">\(F_n\)</span> não for uma boa aproximação de <span class="math inline">\(F_X\)</span> então a distribuição das réplicas não se aproxima de <span class="math inline">\(F_X\)</span>. A amostra <span class="math inline">\(\mathbf{x}\)</span> acima é na verdade uma amostra de <span class="math inline">\(X \sim Poisson(2)\)</span>. Reamostragem de x um grande número de réplicas produz uma boa estimativa de <span class="math inline">\(F_n\)</span>, mas não uma boa estimativa de <span class="math inline">\(F_X\)</span>, porque independentemente do número de réplicas, as amostras de bootstrap nunca incluirão 0.”, traduzido de <span class="citation">Rizzo (2007)</span>.</p>
-</blockquote>
-</div>
-<div id="erro-padrao-bootstrap" class="section level2">
-<h2>Erro Padrão Bootstrap</h2>
-<p><span class="math display">\[\widehat{se}(\hat\theta) = \sqrt{\frac{1}{B-1}\sum \limits_{b = 1}^B [\hat\theta^{(b)} - \bar\theta]^2}\]</span></p>
-<p>Com <span class="math inline">\(\bar\theta = \frac{1}{B}\sum \limits_{b=1}^B\hat\theta^{(b)}\)</span>. <span class="math inline">\(B = 50\)</span> é suficiente, raramente temos <span class="math inline">\(B &gt; 200\)</span>.</p>
-</div>
-<div id="vicio-estimado-por-bootstrap" class="section level2">
-<h2>Vício Estimado por Bootstrap</h2>
-<p>O vício ou viés é dado por,
-<span class="math display">\[B(\hat\theta) = E [\hat\theta] - \theta\]</span>.</p>
-<p>A estimativa Bootstrap é,
-<span class="math display">\[\hat B(\hat{\theta}) = \bar{\hat\theta^*} - \hat\theta.\]</span></p>
-<p>Com <span class="math inline">\(\bar{\hat{\theta}^*} = \frac{1}{B} \sum \limits_{b = 1}^B \hat\theta^{(b)}\)</span> e <span class="math inline">\(\hat\theta= \hat\theta(\mathbf{x})\)</span> é a estimativa calculada na amostra original.</p>
-<p>No bootstrap amostra-se de <span class="math inline">\(F_n\)</span> no lugar de <span class="math inline">\(F_X\)</span>, logo substitui-se <span class="math inline">\(\theta\)</span> por <span class="math inline">\(\hat\theta\)</span> para estimação do vício.</p>
-</div>
-<div id="introducao-aos-intervalos-de-confianca-bootstrap" class="section level2">
-<h2>Introdução aos Intervalos de Confiança Bootstrap</h2>
-<ul>
-<li>Intervalo de Confiança Bootstrap Normal Padrão</li>
-</ul>
-<p><span class="math display">\[(\theta-z_{\alpha/2}\widehat{se}(\theta),\theta+z_{\alpha/2}\widehat{se}(\theta) )\]</span></p>
-<ul>
-<li>Intervalo de Confiança Bootstrap Percentílico
-<span class="math display">\[(\hat\theta_{\alpha/2},\hat\theta_{1-\alpha/2})\]</span></li>
-<li>Intervalo de Confiança Bootstrap Básico</li>
-</ul>
-<p><span class="math display">\[(2\hat{\theta} - \hat{\theta}_{1-\alpha/2}, 2\hat{\theta} - \hat{\theta}_{\alpha/2})\]</span></p>
-</div>
-<div id="testes-de-hipotese-bootstrap" class="section level2">
-<h2>Testes de Hipótese Bootstrap</h2>
-<ul>
-<li><p>Os testes de bootstrap dão resultados semelhantes aos testes
-de permutação quando ambos estão disponíveis.</p></li>
-<li><p>Os testes de bootstrap são mais amplamente aplicáveis,
-embora menos precisos.</p></li>
-</ul>
-</div>
-<div id="comentarios" class="section level2">
-<h2>Comentários</h2>
-<ul>
-<li><p>The jackknife can fail when the statist theta is not “smooth.” The statistic
-is a function of the data. Smoothness means that small changes in the data
-correspond to small changes in the statistic. The median is an example of a
-statistic that is not smooth.</p></li>
 <li><p>A distribuição da população finita representada pela amostra pode ser
 considerada uma pseudo-população com características semelhantes às da verdadeira população.</p></li>
 <li><p>Através da geração repetida de amostras aleatórias desta pseudo-população
-(reamostragem), a distribuição amostral de uma estatística pode ser estimada.</p></li>
-<li><p>As propriedades de um estimador, como viés ou erro padrão, podem ser estimadas
+(reamostragem), a distribuição amostral de uma estatística pode ser estimada. As propriedades de um estimador, como viés ou erro padrão, podem ser estimadas
 reamostragem.</p></li>
 <li><p>As estimativas de bootstrap de uma distribuição de amostragem são análogas à ideia de estimativa de densidade. Construímos um histograma de uma amostra para obter uma estimativa da forma da função de densidade.</p></li>
-<li><p>O histograma não é a densidade, mas para um problema não-paramétrico, pode ser visto como uma estimativa razoável. Temos métodos para gerar amostras aleatórias de completamente densidades especificadas; bootstrap gera amostras aleatórias a partir do empírico distribuição da amostra.</p></li>
 </ul>
-</div>
-<div id="exemplo-1-2" class="section level2">
-<h2>Exemplo 1</h2>
-<p>Os seguintes valores formam uma a.a. observada de uma população
-com média <span class="math inline">\(\mu\)</span> desconhecida. Estime <span class="math inline">\(\mu\)</span> pela mediana amostral <span class="math inline">\(m = med(x_1 , \dots, x_{12} )\)</span> e obtenha a estimativa do erro padrão de <span class="math inline">\(m\)</span> via bootstrap não-paramétrico.</p>
-<pre class="r"><code>dados &lt;- c(2.0312960, 0.7514885, 1.4671803, 
-            0.4668357, 1.1065014, 0.4144307,
-            0.4013687, 1.0668076, 0.9493365, 
-            0.3120167, 0.6832330, 2.1614897)
-m.hat &lt;- median(dados); m.hat</code></pre>
-<pre><code>## [1] 0.8504125</code></pre>
-</div>
-<div id="exemplo-1-3" class="section level2">
-<h2>Exemplo 1</h2>
-<pre class="r"><code> n &lt;- length(dados)
- B &lt;- 1000 # número de réplicas bootstrap
- m.ast &lt;- NULL
-for(j in 1:B){
- amostra.boot &lt;- sample(dados,n,replace=T)
- m.ast[j] &lt;- median(amostra.boot)
-}
-
-ep.boot &lt;- sd(m.ast); ep.boot # estimativa do erro padrão</code></pre>
-<pre><code>## [1] 0.2142091</code></pre>
-<pre class="r"><code>c(quantile(m.ast,0.025),quantile(m.ast,0.975))</code></pre>
-<pre><code>##      2.5%     97.5% 
-## 0.4406332 1.2868408</code></pre>
-</div>
-<div id="histograma-bootstrap" class="section level2">
-<h2>Histograma Bootstrap</h2>
-<p><img src="/post/bootstrap/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-</div>
-<div id="bootstrap-parametrico" class="section level2">
-<h2>Bootstrap Paramétrico</h2>
-<p>O termo “bootstrap” pode se referir a bootstrap não paramétrico ou paramétrico. O bootstrap não paramétrico foi abordado nos slides anteriores.
-Métodos de Monte Carlo que envolvem amostragem a partir de uma
-distribuição de probabilidade, como os métodos do Capítulo 6, às vezes são chamados bootstrap paramétrico.</p>
-</div>
-</div>
-<div id="bradley-efron" class="section level1">
-<h1>Bradley Efron</h1>
-<p><img src="2014_Efron-outdoors.jpg" title="Stanford University (2014)" /></p>
-<p><a href="http://statweb.stanford.edu/~ckirby/brad/">http://statweb.stanford.edu/~ckirby/brad/</a></p>
 <blockquote>
-“The bootstrap is rarely the star of statistics, but it is the best supporting actor”, Bradley Efron.
-</div>
+<p>“The bootstrap is rarely the star of statistics, but it is the best supporting actor”, Bradley Efron.</p>
 </blockquote>
-<p><a href="https://www.youtube.com/watch?v=H2tOhMaXWvI">Vídeo</a></p>
-<div id="contribuicoes" class="section level2">
-<h2>Contribuições:</h2>
+<h3 id="nota">Nota</h3>
+<p><span class="math inline">\(F_n\)</span> é uma distribuição discreta com pesos iguais para cada ponto amostral. <span class="math inline">\(F_n\)</span> é definida como uma proporção amostral.</p>
+<p><span class="math display">\[F_n(t) = \sum \limits_{i=1}^n \frac{\#\{x_i \le t \}}{n} I_{(x_i \le t)}\]</span></p>
 <ul>
-<li><em>Bootstrap methods: another look at the jackknife</em>, <span class="citation">(<span class="citeproc-not-found" data-reference-id="Efron:1992"><strong>???</strong></span>)</span>.
-(Em 1979 foi a 1ª publicação)</li>
-<li><em>The Jackknife, the Bootstrap and Other Resampling Plans</em> , <span class="citation">Efron (1982)</span>.</li>
-<li><em>An Introduction to the Bootstrap</em>, <span class="citation">Efron and Tibshirani (1994)</span>.</li>
+<li><p>A função de distribuição empírica <span class="math inline">\(F_n(x)\)</span> é um estimador de <span class="math inline">\(F_X\)</span>.</p></li>
+<li><p>Vimos no exemplo 7.1 <span class="citation">Rizzo (2007)</span> que reamostrar de <span class="math inline">\(\mathbf{x}\)</span> é equivalente a gerar valores da
+distribuição <span class="math inline">\(F_n(x)\)</span>.</p></li>
 </ul>
+<p><img src="/post/bootstrap/index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<h2 id="referencias">Referências</h2>
 </div>
-<div id="orientandos-notaveis" class="section level2">
-<h2>Orientandos notáveis:</h2>
-<ul>
-<li>Robert Tibshirani (LASSO),</li>
-<li>Norman Edward Breslow (Estimador Não paramétrico para função base de risco).</li>
-</ul>
-<p>Dica: Trevor Hastie e Rob Tibshirani - <a href="https://lagunita.stanford.edu/courses/HumanitiesSciences/StatLearning/Winter2016/about">Statistical Learning</a>.</p>
-</div>
-</div>
-<div id="referencias" class="section level1 unnumbered">
-<h1>Referências</h1>
 <div id="refs" class="references">
+<div id="ref-Diaconis:1983">
+<p>Diaconis, Persi, and Bradley Efron. 1983. “Computer-Intensive Methods in Statistics.” <em>Scientific American</em> 248 (5): 116–31.</p>
+</div>
 <div id="ref-Efron:1979">
 <p>Efron, B. 1979. “Bootstrap Methods: Another Look at the Jackknife.” <em>The Annals of Statistics</em>, 1–26.</p>
 </div>
-<div id="ref-Efron:1982">
-<p>Efron, Bradley. 1982. <em>The Jackknife, the Bootstrap, and Other Resampling Plans</em>. Vol. 38. Siam.</p>
-</div>
-<div id="ref-Efron:1994">
-<p>Efron, Bradley, and Robert J Tibshirani. 1994. <em>An Introduction to the Bootstrap</em>. CRC press.</p>
-</div>
-<div id="ref-Mainly:2006">
-<p>Manly, Bryan FJ. 2006. <em>Randomization, Bootstrap and Monte Carlo Methods in Biology</em>. Chapman; Hall/CRC.</p>
+<div id="ref-Oxford:2014">
+<p>Oxford, Dictionary. 2014. “Oxford Dictionaries.” <em>Language Matters</em>.</p>
 </div>
 <div id="ref-Rizzo:2007">
 <p>Rizzo, Maria L. 2007. <em>Statistical Computing with R</em>. Chapman; Hall/CRC.</p>
 </div>
+<div id="ref-Scholz:2007">
+<p>Scholz, F. 2007. “The Bootstrap Small Sample Properties.” <em>Boeing Comput Serv Res Technol Tech Rep</em>.</p>
 </div>
 </div>
 
@@ -980,11 +844,9 @@ distribuição de probabilidade, como os métodos do Capítulo 6, às vezes são
   
   <a class="badge badge-light" href="/tags/r/">R</a>
   
-  <a class="badge badge-light" href="/tags/renato/">Renato</a>
-  
   <a class="badge badge-light" href="">estatística</a>
   
-  <a class="badge badge-light" href="">intermediário</a>
+  <a class="badge badge-light" href="">não-paramétrica</a>
   
   <a class="badge badge-light" href="/tags/computacional/">computacional</a>
   
@@ -1015,12 +877,96 @@ distribuição de probabilidade, como os métodos do Capítulo 6, às vezes são
   
   <div class="media author-card" itemscope itemtype="http://schema.org/Person">
     
+      
+      <img class="portrait mr-3" src="/authors/renato/avatar_hu30a46c57bfe0df6710578dbda36b23e1_20725_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
 
     <div class="media-body">
-      <h5 class="card-title" itemprop="name"><a href="/authors/silvio-cabral/"></a></h5>
-      
-      
+      <h5 class="card-title" itemprop="name"><a href="/authors/renato/">Renato Valladares Panaro</a></h5>
+      <h6 class="card-subtitle">Estatístico, pesquisador, editor de conteúdo e fundador do Rn00bs</h6>
+      <p class="card-text" itemprop="description">Atualmente atua em pesquisas relacionadas a Análise de Sobrevivência Bayesiana, econometria e séries temporais, e estatística computacional, se interessa por problemas de inferência estatística em geral.</p>
       <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/rvpanaro" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="http://lattes.cnpq.br/6491127183861836" target="_blank" rel="noopener">
+              <i class="ai ai-lattes"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/rvpanaro" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://rvpanaro.github.io" target="_blank" rel="noopener">
+              <i class="ai ai-cv"></i>
+            </a>
+          </li>
         
       </ul>
     </div>
@@ -1034,6 +980,8 @@ distribuição de probabilidade, como os métodos do Capítulo 6, às vezes são
         <div class="hr-light"></div>
         <h3>Related</h3>
         <ul>
+          
+          <li><a href="/post/jackknife/">Como fazer o Jackknife no R?</a></li>
           
           <li><a href="/post/rhistory/">História do R</a></li>
           
@@ -1050,15 +998,8 @@ distribuição de probabilidade, como os métodos do Capítulo 6, às vezes são
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/post/jackknife/" rel="next">Como implementar a técnica Jackknife no R?</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/post/rhistory/" rel="prev">História do R</a>
+    <a href="/post/jackknife/" rel="prev">Como fazer o Jackknife no R?</a>
   </div>
   
 </div>

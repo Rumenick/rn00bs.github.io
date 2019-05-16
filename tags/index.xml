@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Tue, 14 May 2019 13:45:50 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2019 16:23:27 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,16 +15,25 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Tue, 14 May 2019 13:45:50 +0000</pubDate>
+      <pubDate>Wed, 15 May 2019 16:23:27 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>bootstrap</title>
+      <link>/tags/bootstrap/</link>
+      <pubDate>Wed, 15 May 2019 16:23:27 +0000</pubDate>
+      
+      <guid>/tags/bootstrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>computacional</title>
       <link>/tags/computacional/</link>
-      <pubDate>Tue, 14 May 2019 13:45:50 +0000</pubDate>
+      <pubDate>Wed, 15 May 2019 16:23:27 +0000</pubDate>
       
       <guid>/tags/computacional/</guid>
       <description></description>
@@ -33,9 +42,18 @@
     <item>
       <title>estatística</title>
       <link>/tags/estat%C3%ADstica/</link>
-      <pubDate>Tue, 14 May 2019 13:45:50 +0000</pubDate>
+      <pubDate>Wed, 15 May 2019 16:23:27 +0000</pubDate>
       
       <guid>/tags/estat%C3%ADstica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>não-paramétrica</title>
+      <link>/tags/n%C3%A3o-param%C3%A9trica/</link>
+      <pubDate>Wed, 15 May 2019 16:23:27 +0000</pubDate>
+      
+      <guid>/tags/n%C3%A3o-param%C3%A9trica/</guid>
       <description></description>
     </item>
     
